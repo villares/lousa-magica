@@ -13,10 +13,10 @@ Um brinquedo para desenhar com potenciômetros
 * Computador com monitor (ou laptop) Linux, Mac ou Windows.
 
 #### Passos
-
-1. Instale Firmata All inputs no seu Arduino.
-2. Instale o IDE Processing com Modo Python no seu computador.
-3. Faça a montagem dos potenciômetros.
+0. Baixe o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org)
+1. Instale o sketch exemplo da biblioteca Firmata, Firmata All Inputs, no seu Arduino.
+2. Instale no IDE do Processing o Modo Python. Copie o código do repositório e descubra a porta serial do USB.
+3. Faça a montagem dos potenciômetros: os terminais laterias em 5V e GND, os terminais centrais nos pinos analógiocos do Arduino.
 
 #### Para uma montagem definitiva
 * Alicate;
