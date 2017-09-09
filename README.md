@@ -20,7 +20,7 @@ Um brinquedo para desenhar com potenciômetros
 4. Faça a montagem dos potenciômetros:
  4.1 os terminais laterias em 5V e GND,
  4.2 os terminais centrais nos pinos analógiocos do Arduino.
-5. O interruptor de mercúrio é opcional e pode ser substituído por um botão intantâneo também, um terminal deve ser ligado no pino digital 13, assim como no resistor *pull-down*/aterrado, o outro na alimentação 5V. 
+5. O interruptor de mercúrio é opcional e pode ser substituído por um botão intantâneo. Um terminal deve ser ligado no pino digital 13 e simultâneamente no resistor *pull-down*, este ligado em GND. O outro terminal deve ser ligado na alimentação 5V. 
 
 #### Para uma montagem definitiva
 * Alicate;
