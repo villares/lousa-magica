@@ -2,6 +2,8 @@
 
 Um brinquedo para desenhar com potenciômetros
 
+[![Vídeo da lousa mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
+
 #### Lista de materiais
 * Arduino (ou variante com pelo menos 4 portas analógicas);
 * Cabo USB para ligar o Arduino ao computador;
