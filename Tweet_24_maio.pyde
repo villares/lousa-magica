@@ -31,7 +31,6 @@ def setup():
     simpletweet.setOAuthAccessToken(OAAT)
     simpletweet.setOAuthAccessTokenSecret(OATS)
 
-
 def draw():
     pot_branco = arduino.analogRead(5) # pino A5 (analógico)
     pot_amarelo = arduino.analogRead(4)
