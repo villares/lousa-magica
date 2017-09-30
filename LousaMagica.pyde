@@ -11,7 +11,10 @@ Desenho com potenciômetros
 # Arduino + Firmata All Inputs: foram usados 6 potenciômetros e um interruptor de mercúrio + pull down
 add_library('serial')  # import processing.serial.*;
 add_library('arduino')  # import cc.arduino.*;
-SERIAL = 32  # Precisa mudar! Use println((Arduino.list())) para descobrir
+
+for num, porta in enumerate(Arduino.list()):  # Enumera portas seriais
+    println(str(num)+":"+porta)               # Mostra no console
+NUM_PORTA = 0  # Precisa mudar! Leia a lista no console para descobrir
 
 def setup():
     global arduino
@@ -20,7 +23,7 @@ def setup():
     frameRate(30)
     noStroke()
     background(0)
-    arduino = Arduino(this, Arduino.list()[SERIAL], 57600)
+    arduino = Arduino(this, Arduino.list()[NUM_PORTA], 57600)
 
 
 def draw():
