@@ -1,3 +1,5 @@
+----
+
 # Lousa mágica
 
 Um brinquedo para desenhar com potenciômetros
@@ -19,8 +21,8 @@ Um brinquedo para desenhar com potenciômetros
 2. Abra o Processing, pelo próprio IDE [instale o Modo Python](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md) e baixe a biblioteca Arduino (Firmata);
 3. Copie o código `LousaMagica.pyde` deste repositório e altere o número da porta serial/USB;
 4. Faça a montagem dos potenciômetros:
- 4.1 os terminais laterias conectados a 5V e GND,
- 4.2 os terminais centrais conectados aos pinos analógicos do Arduino.
+   4.1 os terminais laterias conectados a 5V e GND,
+    4.2 os terminais centrais conectados aos pinos analógicos do Arduino.
 5. O interruptor (ou botão) deve ter um terminal ligado ao pino digital 13 e simultâneamente ao resistor *pull-down* (conectado ao GND). O outro terminal deve ser ligado à alimentação 5V. 
 
 #### Para uma montagem definitiva
@@ -28,3 +30,6 @@ Um brinquedo para desenhar com potenciômetros
 * Solda;
 * Interruptor de mercúrio (para substituir o botão que permite apagar o desenho).
 * Caixinha com frente transparente , furada para os potenciômetros.
+
+----
+
