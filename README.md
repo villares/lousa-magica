@@ -19,7 +19,7 @@ Um brinquedo para desenhar com potenciômetros
 0. Baixe o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org);
 1. Conecte o Arduino ao computador e pelo Arduino IDE suba o *sketch* **Firmata All Inputs** que está nos exemplos;
 2. Abra o Processing, pelo próprio IDE [instale o Modo Python](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md) e baixe a biblioteca Arduino (Firmata);
-3. Copie o código `LousaMagica.pyde` deste repositório e altere o número da porta serial/USB;
+3. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB;
 4. Faça a montagem dos potenciômetros:
    4.1 os terminais laterias conectados a 5V e GND,
     4.2 os terminais centrais conectados aos pinos analógicos do Arduino.
