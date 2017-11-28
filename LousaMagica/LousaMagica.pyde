@@ -14,11 +14,11 @@ add_library('arduino')  # import cc.arduino.*;
 
 for num, porta in enumerate(Arduino.list()):  # Enumera portas seriais
     println(str(num)+":"+porta)               # Mostra no console
-NUM_PORTA = 0  # Precisa mudar! Leia a lista no console para descobrir
-
+NUM_PORTA = 3  # Precisa mudar! Leia a lista no console para descobrir
+    
 def setup():
     global arduino
-    size(1024, 1024)
+    size(700, 700)
     colorMode(HSB)  # para usar HSB em vez de RGB!
     frameRate(30)
     noStroke()
@@ -34,13 +34,13 @@ def draw():
     pot_1 = arduino.analogRead(1)
     pot_0 = arduino.analogRead(0)
     tilt = arduino.digitalRead(13) # pino 13 (digital)
-    if tilt:
+    if keyPressed:
         background(0) # limpa o canvas com preto
-    X = pot_5
-    Y = pot_0
-    tam = pot_1 / 10 # Tamanho
-    sat = pot_2 / 4 # Saturação
-    opa = pot_3 / 4 # Opacidade/Alpha
+    X = map(pot_0, 0, 1023, 0, width)
+    Y = map(pot_4, 0, 1023, 0, height)
+    tam = pot_5 / 10 # Tamanho
+    sat = 255 #pot_2 / 4 # Saturação
+    opa = 255 #pot_3 / 4 # Opacidade/Alpha
 
     F = frameCount
     fill(F % 255, sat, 255, opa)  # Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
