@@ -32,7 +32,7 @@ Um brinquedo para desenhar com potenciômetros ([repositório no GitHub!](https:
 * Interruptor de mercúrio (para substituir o botão que permite apagar o desenho).
 * Caixinha com frente transparente, furada para os potenciômetros.
 
-#### referências e mais ideias
+#### Mais ideias
 
 * Pong com potenciômetros, versão Dojo: https://github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot
 * Versão "sem fio" feita pelo [João Adriano Freitas](https://github.com/jaafreitas): https://github.com/jaafreitas/LousaMagica
