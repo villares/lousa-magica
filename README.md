@@ -4,8 +4,8 @@
 
 Um brinquedo para desenhar com potenciômetros ([repositório no GitHub!](https://github.com/villares/lousa-magica/))
 
-[![Vídeo da lousa mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
-> vídeo acima - crédito @jaafreitas
+> [![Vídeo da lousa mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
+> vídeo - crédito: [João Adriano Freitas](https://github.com/jaafreitas)
 
 #### Lista de materiais
 * Arduino (ou variante com pelo menos 4 portas analógicas);
