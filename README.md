@@ -7,6 +7,8 @@ Um brinquedo para desenhar com potenciômetros ([repositório no GitHub!](https:
 > [![Vídeo da lousa mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
 > <br />vídeo - crédito: [João Adriano Freitas](https://github.com/jaafreitas)
 
+----
+
 #### Breve histórico
 
 * A *Lousa mágica* foi apresentada inicialmente na inauguração do Sesc 24 de Maio, em agosto de 2017, com 6 potenciômetros e uma biblioteca para enviar Tweets (vídeo acima).
