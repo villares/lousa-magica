@@ -2,7 +2,7 @@
 
 # Lousa mágica & Lousa paramétrica
 
-Um brinquedo para desenhar com potenciômetros ([veja o repositório no GitHub!](https://github.com/villares/lousa-magica/))
+Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](https://github.com/villares/lousa-magica/))
 
 > [![Vídeo da lousa mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
 > <br />vídeo - crédito: [João Adriano Freitas](https://github.com/jaafreitas)
@@ -18,20 +18,20 @@ Um brinquedo para desenhar com potenciômetros ([veja o repositório no GitHub!]
 
 * Arduino (ou variante com pelo menos 4 portas analógicas);
 * Cabo USB para ligar o Arduino ao computador;
-* Potenciômetros lineares, 5kΩ ou 10kΩ, de 4 a 6 (com 2 ou 3 dá mas tem menos graça);
+* 4 a 6 potenciômetros lineares de 10kΩ (com 2 ou 3 dá mas tem menos graça);
 * Protoboard e jumpers;
 * Interruptor/botão instantâneo (opcional, pode ser usado o teclado do computador);
-* Resistor 10kΩ (opcional, para estabilizar o interruptor se não for usado o pino 13, dispensar também se for usar só o teclado do computador);
+* Resistor 10kΩ (opcional, para estabilizar o interruptor se não for usado o pino 13, dispensar também se for ser usado só o teclado do computador);
 * Computador com monitor (ou laptop) Linux, Mac ou Windows. Para impressionar as visitas use uma TV grande ou um projetor.
 
 #### Passos
-0. Baixe o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org);
+0. Baixe e instale o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org);
 1. Conecte o Arduino ao computador e pelo Arduino IDE suba o *sketch* **Firmata All Inputs** que está nos exemplos;
-2. Abra o Processing, pelo próprio IDE [instale o Modo Python](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md) e baixe a biblioteca Arduino (Firmata);
+2. Abra o Processing e pelo próprio IDE baixe e instale o [Modo Python](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md) assim como a biblioteca Arduino (Firmata);
 3. Faça a montagem dos potenciômetros:
    4.1 os terminais laterias conectados a 5V e GND,
    4.2 os terminais centrais conectados aos pinos analógicos do Arduino.
-4. O interruptor (ou botão) deve ter um terminal conectado ao pino digital 13 e o outro à alimentação 5V. [Se não for usar o pino 13, simultâneamente conecte o terminal do pino escolhido ao resistor de 10kΩ  (*pull-down*) que por sua vez se conecta ao GND)]
+4. O interruptor (ou botão) para apagar o desenho da *Lousa mágica* deve ter um terminal conectado ao pino digital 13 e o outro à alimentação 5V. [Se não for usar o pino 13, simultâneamente conecte o terminal do pino escolhido ao resistor de 10kΩ  (*pull-down*) que por sua vez se conecta ao GND)]
 5. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB
 6. Explore as outras versões no repositório  https://github.com/villares/lousa-magica/:
   * *Lousa mágica*: 
@@ -49,7 +49,7 @@ Um brinquedo para desenhar com potenciômetros ([veja o repositório no GitHub!]
 
 * Alicate;
 * Solda;
-* Interruptor de mercúrio (para substituir o botão que permite apagar o desenho na *Lousa mágica*).
+* Interruptor de mercúrio (no lugar do botão para apagar o desenho da *Lousa mágica*).
 * Caixinha com frente transparente, furada para os potenciômetros.
 
 #### Mais ideias
