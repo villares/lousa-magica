@@ -2,7 +2,7 @@
 
 # Lousa mágica & Lousa paramétrica
 
-Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](https://github.com/villares/lousa-magica/))
+Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](https://github.com/villares/lousa-magica/))
 
 > [![Vídeo da lousa mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
 > <br />vídeo - crédito: [João Adriano Freitas](https://github.com/jaafreitas)
