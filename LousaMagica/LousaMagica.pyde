@@ -18,13 +18,11 @@ NUM_PORTA = 3  # Precisa mudar! Confira a lista no console
     
 def setup():
     global arduino
-    size(700, 700)
+    size(700, 700)  # ajuste aqui o tamanho da área de desenho!
     colorMode(HSB)  # para usar HSB em vez de RGB!
     frameRate(30)
     noStroke()
-    background(0)
     arduino = Arduino(this, Arduino.list()[NUM_PORTA], 57600)
-
 
 def draw():
     pot_1 = arduino.analogRead(1) # pino A1 (Analógico 1)
@@ -32,12 +30,12 @@ def draw():
     pot_3 = arduino.analogRead(3)  
     pot_4 = arduino.analogRead(3)
     tilt = arduino.digitalRead(13) # pino 13 (Digital 13)
-    if tilt:
+    if tilt or keyPressed:
         background(0) # limpa o canvas com preto
     X = map(pot_1, 0, 1023, 0, width)
     Y = map(pot_4, 0, 1023, 0, height)
     tam = pot_2 / 10 # Tamanho
-    sat = pot_3 / 4 # Saturação
+    sat = pot_3 / 4  # Saturação
     opa = 255 # Opacidade/Alpha
     F = frameCount
     fill(F % 255, sat, 255, opa)  # Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
