@@ -27,7 +27,7 @@ def setup():
 
 
 def draw():
-    pot_1 = arduino.analogRead(1) # pidno A1 (Analógico 1)
+    pot_1 = arduino.analogRead(1) # pino A1 (Analógico 1)
     pot_2 = arduino.analogRead(2)
     pot_3 = arduino.analogRead(3)  
     pot_4 = arduino.analogRead(3)
