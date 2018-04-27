@@ -61,7 +61,7 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
 
 #### Mais ideias
 
-* Pong com potenciômetros, versão Dojo: https://github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot
+* Pong com potenciômetros, versão Dojo: [`github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot`](https://github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot)
 * Versão "sem fio" feita pelo [João Adriano Freitas](https://github.com/jaafreitas): [`github.com/jaafreitas/LousaMagica`](https://github.com/jaafreitas/LousaMagica)
 
 ----
