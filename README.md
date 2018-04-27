@@ -35,9 +35,10 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
 5. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB
 6. Explore as outras versões no repositório  https://github.com/villares/lousa-magica/:
   * *Lousa mágica*: 
-  		- versão com apenas 2 potenciômetros
-  	- versão em Processing Modo Java
-  	- versão apresentada no Circuito Sesc de Artes 2018
+    - versão com apenas 2 potenciômetros
+    - versão em Processing Modo Java
+    - versão apresentada no Circuito Sesc de Artes 2018
+
   * *Lousa paramétrica*:  
     - versão apresentada no Circuito Sesc de Artes 2018
     - versão *Grafos*
