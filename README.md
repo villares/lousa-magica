@@ -41,14 +41,14 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
 6. Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
 
   * *Lousa mágica*: 
-    - [versão com apenas 2 potenciômetros](https://github.com/villares/lousa-magica/LousaMagica2pots)
-    - [versão em Processing Modo Java](https://github.com/villares/lousa-magica/LousaMagica_java)
-    - [versão Circuito Sesc de Artes 2018](https://github.com/villares/lousa-magica/lousa_magica_versao_circuito_sesc)
+    - [versão com apenas 2 potenciômetros](https://github.com/villares/tree/master/lousa-magica/LousaMagica2pots)
+    - [versão em Processing Modo Java](https://github.com/villares/lousa-magica/tree/master/LousaMagica_java)
+    - [versão Circuito Sesc de Artes 2018](https://github.com/villares/lousa-magica/tree/master//lousa_magica_versao_circuito_sesc)
 
   * *Lousa paramétrica*:  
-    - [*Árvore recursiva* (Circuito Sesc de Artes 2018)](https://github.com/villares/lousa-magica/lousa_parametrica_poligonos_recursivos)
-    - [*Grafos*](https://github.com/villares/lousa-magica/lousa_parametrica_grafos)
-    - [*Polígonos recursivos*](https://github.com/villares/lousa-magica/lousa_parametrica_poligonos_recursivos)
+    - [*Árvore recursiva* (Circuito Sesc de Artes 2018)](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_arvore_circuito_sesc)
+    - [*Grafos*](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_grafos)
+    - [*Polígonos recursivos*](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_poligonos_recursivos)
     - Procure mais *sketches* no repositório [`villares.github.com/sketch-a-day`](https://villares.github.com/sketch-a-day)
 
 
