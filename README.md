@@ -9,8 +9,8 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
 
 #### Breve histórico
 
-* A *Lousa mágica* foi apresentada inicialmente pelo [Estúdio Hacker](http://estudiohacker.io) na inauguração do Sesc 24 de Maio, em agosto de 2017 (vídeo acima), com 6 potenciômetros, permitia desenhar, apagar o desenho tombando a caixa de controle e por meio de uma biblioteca para enviar Tweets com a imagem do desenho.
-* No Estúdio Hacker Day, atividade realizada em 7 de setembro de 2017 no Sesc 24 de maio foi montada pelos participantes uma versão da *Lousa mágica* em uma protoboard, com 4 potenciômetros.
+* A *Lousa mágica* foi apresentada inicialmente pelo [Estúdio Hacker](http://estudiohacker.io) na inauguração do Sesc 24 de Maio, em agosto de 2017 (vídeo acima), com 6 potenciômetros, permitia desenhar e apagar o desenho tombando a caixa de controle. Também era possível (por conta de uma biblioteca) postar *tweets* com o desenho.
+* No Estúdio Hacker Day em 7 de setembro de 2017, também no Sesc 24 de maio, foi realizada atividade em que os participantes montavam uma versão da *Lousa mágica* com 4 potenciômetros em uma protoboard.
 * Para o Circuito Sesc de Artes 2018 foram feitas montagens com 4 potenciômetros com uma variante do software da *Lousa mágica* e uma versão nova chamada *Lousa paramétrica* com um desenho paramétrico recursivo de uma árvore.
 * Diversos desenhos do projeto [*sketch-a-day*](https://villares.github.com/sketch-a-day) podem ser usados com a mesma montagem.
 
