@@ -35,7 +35,7 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
    4.2 Conecte os terminais centrais aos pinos analógicos do Arduino.
 4. O interruptor (ou botão) para apagar o desenho da *Lousa mágica* deve ter um terminal conectado ao pino digital 13 e o outro à alimentação 5V. [Se não for usar o pino 13, simultâneamente conecte o terminal do pino escolhido ao resistor de 10kΩ  (*pull-down*) que por sua vez se conecta ao GND)]
 5. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB
-6. Explore as outras versões no repositório  [github.com/villares/lousa-magica/](https://github.com/villares/lousa-magica/):
+6. Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
   * *Lousa mágica*: 
     - [versão com apenas 2 potenciômetros](LousaMagica2pots)
     - [versão em Processing Modo Java](LousaMagica_java)
@@ -45,7 +45,7 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
     - [versão apresentada no Circuito Sesc de Artes 2018](lousa_parametrica_poligonos_recursivos)
     - [versão *Grafos*](lousa_parametrica_grafos)
     - [versão *Polígonos recursivos*](lousa_parametrica_poligonos_recursivos)
-    - Procure mais *sketches* no repositório [villares.github.com/sketch-a-day](https://villares.github.com/sketch-a-day)
+    - Procure mais *sketches* no repositório [`villares.github.com/sketch-a-day`](https://villares.github.com/sketch-a-day)
 
 
 #### Para uma montagem definitiva
@@ -58,7 +58,7 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
 #### Mais ideias
 
 * Pong com potenciômetros, versão Dojo: https://github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot
-* Versão "sem fio" feita pelo [João Adriano Freitas](https://github.com/jaafreitas): https://github.com/jaafreitas/LousaMagica
+* Versão "sem fio" feita pelo [João Adriano Freitas](https://github.com/jaafreitas): [`github.com/jaafreitas/LousaMagica`](https://github.com/jaafreitas/LousaMagica)
 
 ----
 
