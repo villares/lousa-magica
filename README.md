@@ -24,6 +24,8 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
 * Resistor 10kΩ (opcional, para estabilizar o interruptor se não for usado o pino 13, dispensar também se for ser usado só o teclado do computador);
 * Computador com monitor (ou laptop) Linux, Mac ou Windows. Para impressionar as visitas use uma TV grande ou um projetor.
 
+![montagem](assets/montagem.png)
+
 #### Passos
 0. Baixe e instale o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org);
 1. Conecte o Arduino ao computador e pelo Arduino IDE suba o *sketch* **Firmata All Inputs** que está nos exemplos;
