@@ -39,12 +39,12 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
   * *Lousa mágica*: 
     - [versão com apenas 2 potenciômetros](LousaMagica2pots)
     - [versão em Processing Modo Java](LousaMagica_java)
-    - [versão apresentada no Circuito Sesc de Artes 2018](lousa_magica_versao_circuito_sesc)
+    - [versão Circuito Sesc de Artes 2018](lousa_magica_versao_circuito_sesc)
 
   * *Lousa paramétrica*:  
-    - [versão apresentada no Circuito Sesc de Artes 2018](lousa_parametrica_poligonos_recursivos)
-    - [versão *Grafos*](lousa_parametrica_grafos)
-    - [versão *Polígonos recursivos*](lousa_parametrica_poligonos_recursivos)
+    - [*Árvore recursiva* (Circuito Sesc de Artes 2018)](lousa_parametrica_poligonos_recursivos)
+    - [*Grafos*](lousa_parametrica_grafos)
+    - [*Polígonos recursivos*](lousa_parametrica_poligonos_recursivos)
     - Procure mais *sketches* no repositório [`villares.github.com/sketch-a-day`](https://villares.github.com/sketch-a-day)
 
 
