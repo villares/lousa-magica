@@ -29,21 +29,23 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
 1. Conecte o Arduino ao computador e pelo Arduino IDE suba o *sketch* **Firmata All Inputs** que está nos exemplos;
 2. Abra o Processing e pelo próprio IDE baixe e instale o [Modo Python](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md) assim como a biblioteca Arduino (Firmata);
 3. Faça a montagem dos potenciômetros:
-   4.1 os terminais laterias conectados a 5V e GND,
-   4.2 os terminais centrais conectados aos pinos analógicos do Arduino.
+
+   4.1 Conecte os terminais laterias aos pinos 5V e GND,
+
+   4.2 Conecte os terminais centrais aos pinos analógicos do Arduino.
 4. O interruptor (ou botão) para apagar o desenho da *Lousa mágica* deve ter um terminal conectado ao pino digital 13 e o outro à alimentação 5V. [Se não for usar o pino 13, simultâneamente conecte o terminal do pino escolhido ao resistor de 10kΩ  (*pull-down*) que por sua vez se conecta ao GND)]
 5. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB
-6. Explore as outras versões no repositório  https://github.com/villares/lousa-magica/:
+6. Explore as outras versões no repositório  [github.com/villares/lousa-magica/](https://github.com/villares/lousa-magica/):
   * *Lousa mágica*: 
-    - versão com apenas 2 potenciômetros
-    - versão em Processing Modo Java
-    - versão apresentada no Circuito Sesc de Artes 2018
+    - [versão com apenas 2 potenciômetros](LousaMagica2pots)
+    - [versão em Processing Modo Java](LousaMagica_java)
+    - [versão apresentada no Circuito Sesc de Artes 2018](mousa_magica_versao_circuito_sesc)
 
   * *Lousa paramétrica*:  
-    - versão apresentada no Circuito Sesc de Artes 2018
-    - versão *Grafos*
-    - versão *Polígonos recursivos*
-    - Procure mais *sketches* no repositório https://villares.github.com/sketch-a-day
+    - [versão apresentada no Circuito Sesc de Artes 2018](lousa_parametrica_poligonos_recursivos)
+    - [versão *Grafos*](lousa_parametrica_grafos)
+    - [versão *Polígonos recursivos*](lousa_parametrica_poligonos_recursivos)
+    - Procure mais *sketches* no repositório [villares.github.com/sketch-a-day](https://villares.github.com/sketch-a-day)
 
 
 #### Para uma montagem definitiva
@@ -60,3 +62,4 @@ Brinquedos para desenhar com potenciômetros ([veja o repositório no GitHub!](h
 
 ----
 
+Alexandre B A Villares ([abav.lugaralgum.com](https://abav.lugaralgum.com)), [CC-BY-NC-SA-4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
