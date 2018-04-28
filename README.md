@@ -20,8 +20,8 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 * Cabo USB para ligar o Arduino ao computador;
 * 4 a 6 potenciômetros lineares de 10kΩ (com 2 ou 3 dá mas tem menos graça);
 * Protoboard e jumpers;
-* Interruptor/botão instantâneo (opcional, pode ser usado o teclado do computador);
-* Resistor 10kΩ (opcional, caso seja usado o  interruptor e este não for conectado ao pino 13);
+* botão instantâneo ou interruptor de mercúrio (opcional, pode ser usado o teclado do computador);
+* Resistor 10kΩ (opcional, caso seja usado um botão/ interruptor conectado a um pino diferente do D13);
 * Computador com monitor (ou laptop) Linux, Mac ou Windows. Para impressionar as visitas use uma TV grande ou um projetor.
 
 ![montagem](assets/montagem2.png)
@@ -39,7 +39,8 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
    4.2 Conecte os terminais centrais aos pinos analógicos do Arduino.
 
-4. O interruptor (ou botão) para apagar o desenho da *Lousa mágica* deve ter um terminal conectado ao pino digital 13 e o outro à alimentação 5V. [Se não for usar o pino 13, simultâneamente conecte o terminal do pino escolhido ao resistor de 10kΩ  (*pull-down*) que por sua vez se conecta ao GND)]
+4. O interruptor (ou botão) para apagar o desenho da *Lousa mágica* deve ter um terminal conectado ao pino digital 13 e o outro à alimentação 5V.
+   [Se não for usar o pino D13,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao GND). O pino D13 já tem um *pull-down* embutido]
 
 5. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB
 
