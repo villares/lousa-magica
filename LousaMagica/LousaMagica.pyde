@@ -28,7 +28,7 @@ def draw():
     pot_1 = arduino.analogRead(1) # pino A1 (Analógico 1)
     pot_2 = arduino.analogRead(2)
     pot_3 = arduino.analogRead(3)  
-    pot_4 = arduino.analogRead(3)
+    pot_4 = arduino.analogRead(4)
     tilt = arduino.digitalRead(13) # pino 13 (Digital 13)
     if tilt or keyPressed:
         background(0) # limpa o canvas com preto
@@ -38,6 +38,6 @@ def draw():
     sat = pot_3 / 4  # Saturação
     opa = 255 # Opacidade/Alpha
     F = frameCount
-    fill(F % 255, sat, 255, opa)  # Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
+    fill(F % 256, sat, 255, opa)  # Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
     ellipse(X, Y, tam, tam)
     #println(pot_1, pot_2, pot_3, pot_4, tilt)
