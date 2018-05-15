@@ -32,7 +32,7 @@ def draw():
     opa = 255  # Opacidade/Alpha
     F = frameCount
     # Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
-    fill(F % 255, sat, 255, opa)
+    fill(F % 256, sat, 255, opa)
     ellipse(X, Y, tam, tam)
     if keyPressed:     # esta versão apaga o desenho quando se pressiona uma tecla
         background(0)  # limpa o canvas com preto
