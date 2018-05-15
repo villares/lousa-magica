@@ -32,7 +32,7 @@ void draw() {
   float opa = 255;  // Opacidade/Alpha
   float F = frameCount;
   // Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
-  fill(F % 255, sat, 255, opa);
+  fill(F % 256, sat, 255, opa);
   ellipse(X, Y, tam, tam);
   boolean tilt = (arduino.digitalRead(13) == arduino.HIGH);
   if (tilt) {
