@@ -32,7 +32,7 @@ def draw():
     sat = input.analog(3) / 4 # Saturação
 
     F = frameCount
-    fill(F % 255, sat, 255)  # Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
+    fill(F % 256, sat, 255)  # Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
     ellipse(X, Y, tam, tam)
     
     # Desenha e lê sliders se necessário
