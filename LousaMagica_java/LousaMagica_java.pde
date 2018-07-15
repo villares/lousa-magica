@@ -25,10 +25,10 @@ void setup() {
 }
 
 void draw() {
-  float X = arduino.analogRead(5)/2;  // pino A5 (analógico)
-  float Y = arduino.analogRead(0)/2;
-  float tam = arduino.analogRead(1)/10;  // Tamanho
-  float sat = 255;  // Saturação
+  float X = arduino.analogRead(1)/2;  // pino A5 (analógico)
+  float Y = arduino.analogRead(4)/2;
+  float tam = arduino.analogRead(2)/10;  // Tamanho
+  float sat = arduino.analogRead(3)/4;  // Saturação
   float opa = 255;  // Opacidade/Alpha
   float F = frameCount;
   // Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
