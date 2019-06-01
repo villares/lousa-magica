@@ -25,14 +25,14 @@ void setup() {
 }
 
 void draw() {
-  float X = arduino.analogRead(1)/2;  // pino A5 (analógico)
-  float Y = arduino.analogRead(4)/2;
+  float X = arduino.analogRead(1)/2;  // float X = map(arduino.analogRead(1), 0, 1023, 0, width)
+  float Y = arduino.analogRead(4)/2;  // float Y = map(arduino.analogRead(4), 0, 1023, 0, height)
   float tam = arduino.analogRead(2)/10;  // Tamanho
-  float sat = arduino.analogRead(3)/4;  // Saturação
+  float sat = arduino.analogRead(3)/4;   // Saturação
   float opa = 255;  // Opacidade/Alpha
   float F = frameCount;
-  // Note modo HSB no setup! (Matiz, Saturação, Brilho, Alfa)
-  fill(F % 256, sat, 255, opa);
+  // Note modo HSB no setup! (Hue/Matiz, Saturação, Brilho, Alfa)
+  fill(F % 256, sat, 255, opa);  // Matiz muda com o resto da divisão de frameCount por 256
   ellipse(X, Y, tam, tam);
   boolean tilt = (arduino.digitalRead(13) == arduino.HIGH);
   if (tilt) {
