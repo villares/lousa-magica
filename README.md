@@ -57,7 +57,6 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
     - [*Polígonos recursivos*](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_poligonos_recursivos)
     - Procure mais *sketches* no repositório [`villares.github.com/sketch-a-day`](https://villares.github.com/sketch-a-day)
 
-
 #### Para uma montagem definitiva
 
 * Alicate;
