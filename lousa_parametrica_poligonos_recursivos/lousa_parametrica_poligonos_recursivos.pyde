@@ -23,24 +23,25 @@ def setup():
 def draw():
     background(0)
 
-    I = map(input.analog(1), 0, 1023, PI / 6, TWO_PI / 3) # ângulo
-    J_upper = 2 + I * 1.5  # change J's upper limit...
-    J = map(input.analog(2), 0, 1023, 1, J_upper)  # 1 to 3 + I * 1.5
-    K = map(input.analog(3), 0, 1023, 0, 255)  # saturação
-    L = map(input.analog(4), 0, 1023, 0, TWO_PI)  # 0 to TWO_PI # giro
+    ang = map(input.analog(1), 0, 1023, PI / 6, TWO_PI / 3) # ângulo
+    depth_upper_limit = 2 + ang * 1.5  # change J's upper limit...
+    dep = map(input.analog(2), 0, 1023, 1, depth_upper_limit)  # 1 to 2 + ang * 1.5
+    sat = map(input.analog(3), 0, 1023, 0, 255)  # saturação
+    rot = map(input.analog(4), 0, 1023, 0, TWO_PI)  # 0 to TWO_PI # giro
 
-    poly_shape(width / 2, height / 2, I, J, K, L)
+    poly_shape(width / 2, height / 2, ang, dep, sat, rot)
 
     # Desenha e lê sliders se necessário
     input.update()
 
-def poly_shape(x, y, angle, D, sat, rotation):
-    stroke((frameCount / 2 * D) % 256, sat, 255, 100)
-    strokeWeight(D * 10)
+def poly_shape(x, y, angle, depth, saturation_, rotation):
+    H, S, B, A = (frameCount / 2 * depth) % 256, saturation_, 255, 100
+    stroke(H, S, B, A)
+    strokeWeight(depth * 10)
     with pushMatrix():
         translate(x, y)
         rotate(rotation)
-        radius = D * 40
+        radius = depth * 40
         # create a polygon on a ps PShape object
         ps = createShape()
         ps.beginShape()
@@ -52,12 +53,12 @@ def poly_shape(x, y, angle, D, sat, rotation):
             a += angle
         ps.endShape(CLOSE)  # end of PShape creation
         shape(ps, 0, 0)  # Draw the PShape
-        if D > 1:  # if the recursion 'distance'/'depth' allows...
+        if depth > 1:  # if the recursion 'distance'/'depth' allows...
             for i in range(ps.getVertexCount()):
                 # for each vertex
                 pv = ps.getVertex(i)  # gets vertex as a PVector
                 # recusively call poly_shape with a smaller D
-                poly_shape(pv.x, pv.y, angle, D - 1, sat, rotation)
+                poly_shape(pv.x, pv.y, angle, depth - 1, saturation_, rotation)
 
 def keyPressed():
     if key == 'p':
