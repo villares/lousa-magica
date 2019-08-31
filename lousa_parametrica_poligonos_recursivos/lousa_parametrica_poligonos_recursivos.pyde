@@ -6,10 +6,11 @@ Tecle 'h' para ajuda...
 """
 
 from __future__ import division
+
 add_library('serial')  # import processing.serial.*;
 add_library('arduino')  # import cc.arduino.*
 
-from inputs import *
+from inputs import Input
 
 def setup():
     global input

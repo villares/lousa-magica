@@ -167,7 +167,7 @@ class Slider:
         line(self.x, self.y, self.x + 120, self.y)
         # press mouse to move slider
         if (self.x < mouseX < self.x + 120 and
-                self.y < mouseY < self.y + 20):
+                self.y < mouseY < self.y + 20) or self.up or self.down:
             fill(250)
             textSize(10)
             text(str(int(self.val)), self.rectx, self.recty + 35)
