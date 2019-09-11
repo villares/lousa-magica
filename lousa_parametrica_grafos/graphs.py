@@ -18,6 +18,9 @@ class Ponto():
         self.cor = color(random(256), 255, 255)
         self.cria_arestas()
 
+    def __getitem__(self,i):
+        return (self.x, self.y, self.z)[i]
+
     def desenha(self):
         noStroke()
         fill(150, 50)
