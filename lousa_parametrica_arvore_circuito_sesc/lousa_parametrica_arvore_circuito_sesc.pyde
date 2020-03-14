@@ -1,6 +1,13 @@
 """
 Árvore do Circuito SESC - Alexandre B A Villares
 http://estudiohacker.io 
+
+2020-03-14 Ajustes para Arduino na primeira porta serial/usb
+
+Alerta para uso no Windows 64bits:
+https://github.com/jdf/Processing.py-Bugs/issues/227
+Contorno:
+Remova a DLL em C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll
 """
 add_library('serial')  # import processing.serial.*;
 add_library('arduino')  # import cc.arduino.*;
