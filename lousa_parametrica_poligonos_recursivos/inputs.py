@@ -6,12 +6,15 @@ from javax.swing import JOptionPane
 This will hopefully switch between Arduino (Firmata) variable input and
 nice sliders based on Peter Farell's Sliders htts://twitter.com/hackingmath
 https://github.com/hackingmath/python-sliders http://farrellpolymath.com/
+
+
+2020-03-14 Fix for Arduino no the first serial port (index 0)!
 """
 class Input:
 
     def __init__(self, Arduino):
         self.select_source(Arduino)
-        if self.source > 0:
+        if self.source is not None:
             self.arduino = Arduino(this, Arduino.list()[self.source], 57600)
         else:
             # start, end, default
@@ -26,13 +29,13 @@ class Input:
             self.sliders = {1: A, 2: B, 3: C, 4: D}
 
     def analog(self, pin):
-        if self.source:
+        if self.source is not None:
             return self.arduino.analogRead(pin)
         else:
             return self.sliders[pin].val
 
     def update(self):
-        if not self.source:
+        if self.source is None:
             for pin, slider in self.sliders.iteritems():
                 slider.update()
 
@@ -74,7 +77,7 @@ class Input:
 
     def digital(self, pin):
         space_pressed = keyPressed and key == ' '
-        if self.source:
+        if self.source is not None:
             if pin == 13:
                 return self.arduino.digitalRead(13) or space_pressed
             else:
@@ -92,10 +95,11 @@ class Input:
                                   "Escolha a porta ou pressione Cancel\npara usar 'sliders':",
                                   port_list,
                                   -1)  # index for default option
+        # print(self.source) # for debug
         self.help()
 
     def help(self):
-        if self.source:
+        if self.source is not None:
             message = """   Teclas:
             'h' para esta ajuda
             'p' para salvar uma imagem"""
@@ -167,7 +171,7 @@ class Slider:
         line(self.x, self.y, self.x + 120, self.y)
         # press mouse to move slider
         if (self.x < mouseX < self.x + 120 and
-                self.y < mouseY < self.y + 20) or self.up or self.down:
+                self.y < mouseY < self.y + 20):
             fill(250)
             textSize(10)
             text(str(int(self.val)), self.rectx, self.recty + 35)
