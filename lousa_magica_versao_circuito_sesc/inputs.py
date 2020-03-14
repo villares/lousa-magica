@@ -3,15 +3,18 @@ from __future__ import unicode_literals
 from javax.swing import JOptionPane
 
 """
-This will switch between Arduino (Firmata) variable input and
+This will hopefully switch between Arduino (Firmata) variable input and
 nice sliders based on Peter Farell's Sliders htts://twitter.com/hackingmath
 https://github.com/hackingmath/python-sliders http://farrellpolymath.com/
+
+
+2020-03-14 Fix for Arduino no the first serial port (index 0)!
 """
 class Input:
 
     def __init__(self, Arduino):
         self.select_source(Arduino)
-        if self.source > 0:
+        if self.source is not None:
             self.arduino = Arduino(this, Arduino.list()[self.source], 57600)
         else:
             # start, end, default
@@ -26,13 +29,13 @@ class Input:
             self.sliders = {1: A, 2: B, 3: C, 4: D}
 
     def analog(self, pin):
-        if self.source:
+        if self.source is not None:
             return self.arduino.analogRead(pin)
         else:
             return self.sliders[pin].val
 
     def update(self):
-        if not self.source:
+        if self.source is None:
             for pin, slider in self.sliders.iteritems():
                 slider.update()
 
@@ -74,7 +77,7 @@ class Input:
 
     def digital(self, pin):
         space_pressed = keyPressed and key == ' '
-        if self.source:
+        if self.source is not None:
             if pin == 13:
                 return self.arduino.digitalRead(13) or space_pressed
             else:
@@ -91,15 +94,15 @@ class Input:
         self.source = option_pane("O seu Arduino está conectado?",
                                   "Escolha a porta ou pressione Cancel\npara usar 'sliders':",
                                   port_list,
-                                  0)  # index for default option
+                                  -1)  # index for default option
+        # print(self.source) # for debug
         self.help()
 
     def help(self):
-        if self.source:
+        if self.source is not None:
             message = """   Teclas:
             'h' para esta ajuda
-            'p' para salvar uma imagem
-            Tombe a lousa para lousa para limpar o desenho!"""
+            'p' para salvar uma imagem"""
         else:
             message = """    Teclas:
             'h' para esta ajuda
@@ -107,8 +110,7 @@ class Input:
             'a' (-) ou 'd' (+) para o slider 1
             's' (-) ou 'w' (+) para o slider 2
              ←(-) ou  → (+) para o slider 3
-             ↓  (-) ou  ↑  (+) para o slider 4
-            [barra de espaço] para limpar o desenho"""
+             ↓  (-) ou  ↑  (+) para o slider 4"""
         ok = JOptionPane.showMessageDialog(None, message)
 
 

@@ -3,9 +3,12 @@ from __future__ import unicode_literals
 from javax.swing import JOptionPane
 
 """
-This will hpefully switch between Arduino (Firmata) variable input and
+This will hopefully switch between Arduino (Firmata) variable input and
 nice sliders based on Peter Farell's Sliders htts://twitter.com/hackingmath
 https://github.com/hackingmath/python-sliders http://farrellpolymath.com/
+
+
+2020-03-14 Fix for Arduino no the first serial port (index 0)!
 """
 class Input:
 
