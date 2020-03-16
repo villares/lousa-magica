@@ -32,11 +32,17 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
 2. Conecte o seu Arduino/placa ao computador, abra o Arduino IDE, localize e abra pelo menu `File > Examples > Firmata` o *sketch* chamado **Firmata All Inputs**, em seguida selecione no menu `Tools > Board:` o modelo da sua placa, e em `Tools > Port` a porta USB/serial em que a placa está conectada ao computador. Por fim use o botão `➔` para fazer o *upload* do *sketch* para a placa.;
 
+    > Problemas conhecidos:
+    > - Alguns clones de Arduino precisam de um driver USB especial: [How to Install CH340 Drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#drivers-if-you-need-them)
+    > - No Linux, você pode estar sem permissão de acesso à porta USB/serial, o que pode ser corrigido
+    > abrindo uma janela de terminal e digitando na linha de comando `sudo usermod -a -G dialout <seu nome de usuário do linux aqui>`
+
 3. Abra o Processing IDE e pelo menu `Sketch > Import Library... > Add Library...` baixe e instale a biblioteca **Arduino (Firmata)**. Sugerimos também que você instale o **modo Python** pelo menu de seleção de modos no canto superior direito do IDE, que inicialmente marca `Java` ([instruções detalhadas](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md));
 
 4. Faça a conexão dos potenciômetros ao seu Arduino/placa conforme a imagem:
 
     4.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
+
     4.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
 
 5. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
@@ -45,7 +51,9 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
 6. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e **altere o número da porta serial/USB adequadamente!** Procure testar usando os números das portas que aparecem no console do Processing, começando pela primeira da lista: `NUM_PORTA = 0`.;
 
-    > Problemas conhecidos: No Windows 64-bits o Processing modo Python pode estar tentando carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como domentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
+    > Problemas conhecidos:
+    > - No Linux, confirme a permissão de acesso à porta USB/serial (mencionados no final do item 2).
+    > - No Windows 64-bits o Processing modo Python pode tentar carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como domentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
 
 #### Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
 
