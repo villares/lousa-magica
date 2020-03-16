@@ -37,7 +37,6 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 4. Faça a conexão dos potenciômetros ao seu Arduino/placa conforme a imagem:
 
     4.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
-
     4.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
 
 5. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
@@ -74,7 +73,6 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 #### Mais ideias
 
 * Pong com potenciômetros, versão Dojo: [`github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot`](https://github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot)
-
 * Versão "sem fio" feita pelo [João Adriano Freitas](https://github.com/jaafreitas): [`github.com/jaafreitas/LousaMagica`](https://github.com/jaafreitas/LousaMagica)
 
 ----
