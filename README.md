@@ -43,9 +43,9 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
     > Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
 
-6. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB adequadamente (procure testar usando os números das portas que aparecem no console do Processing);
+6. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e **altere o número da porta serial/USB adequadamente!** Procure testar usando os números das portas que aparecem no console do Processing, começando pela primeira da lista: `NUM_PORTA = 0`.;
 
-    > Problemas conhecidos: No Windows 64-bits o Processing modo Python tentando carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como domentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
+    > Problemas conhecidos: No Windows 64-bits o Processing modo Python pode estar tentando carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como domentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
 
 #### Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
 
