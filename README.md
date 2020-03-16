@@ -22,7 +22,7 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 * 4 a 6 potenciômetros lineares (tipo 'B") de 10kΩ (com 2 ou 3 dá mas tem menos graça);
 * Protoboard e jumpers;
 * Computador com monitor (ou laptop) Linux, Mac ou Windows. Para impressionar as visitas use uma TV grande ou um projetor.
-* Opcionais: botão instantâneo ou interruptor de mercúrio (pode ser usado apenas o teclado do computador) e resistor 10kΩ (caso seja usado um botão/ nterruptor conectado a um pino diferente do D13);
+* Opcionais: botão instantâneo ou interruptor de mercúrio (pode ser usado apenas o teclado do computador) e resistor 10kΩ (caso seja usado um botão/interruptor conectado a um pino diferente do D13);
 
 #### Instruções de montagem
 
