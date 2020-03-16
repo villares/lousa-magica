@@ -37,19 +37,18 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 4. Faça a conexão dos potenciômetros ao seu Arduino/placa conforme a imagem:
 
     4.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
-    
+
     4.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
 
 5. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
 
-  > Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
+    > Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
 
 6. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB adequadamente (procure testar usando os números das portas que aparecem no console do Processing);
 
-  > Problemas conhecidos: No Windows 64-bits o Processing modo Python tentando carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como domentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
+    > Problemas conhecidos: No Windows 64-bits o Processing modo Python tentando carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como domentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
 
-
-7. Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
+#### Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
 
   * *Lousa mágica*: 
     - [versão com apenas 2 potenciômetros](https://github.com/villares/lousa-magica/tree/master/LousaMagica2pots)
