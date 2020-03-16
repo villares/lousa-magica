@@ -19,10 +19,10 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
 * Arduino (ou variante) com pelo menos 4 portas analógicas;
 * Cabo USB para ligar o Arduino ao computador;
-* 4 a 6 potenciômetros lineares (tipo 'B") de 10kΩ (com 2 ou 3 dá mas tem menos graça);
+* 4 a 6 potenciômetros lineares (tipo "B") de 10kΩ (com 2 ou 3 dá mas tem menos graça);
 * Protoboard e jumpers;
 * Computador com monitor (ou laptop) Linux, Mac ou Windows. Para impressionar as visitas use uma TV grande ou um projetor.
-* Opcionais: botão instantâneo ou interruptor de mercúrio (pode ser usado apenas o teclado do computador) e resistor 10kΩ (caso seja usado um botão/interruptor conectado a um pino diferente do D13);
+* Opcional: Botão instantâneo ou interruptor de mercúrio (pode ser usado apenas o teclado do computador) e resistor 10kΩ (caso seja usado um botão/interruptor conectado a um pino diferente do `D13`);
 
 #### Instruções de montagem
 
@@ -30,13 +30,13 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
 0. Baixe e instale o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org);
 
-1. Conecte o seu Arduino/placa ao computador e localize nos exemplos do Arduino IDE o *sketch* **Firmata All Inputs**, selecione no menu *Tools*/Ferramentas o modelo da sua placa, a porta USB/serial em que está conectada ao computador e em seguida faça o *Upload* do *sketch* para a placa.;
+1. Conecte o seu Arduino/placa ao computador, abra o Arduino IDE, localize e abra pelo menu `File > Examples > Firmata` o *sketch* chamado **Firmata All Inputs**, em seguida selecione no menu `Tools > Board:` o modelo da sua placa, e em `Tools > Port` a porta USB/serial em que a placa está conectada ao computador. Por fim use o botão `➔` para fazer o *upload* do *sketch* para a placa.;
 
-2. Abra o Processing e pelo próprio IDE, no menu `Sketch > Import Library... > Add Library...`, baixe e instale a biblioteca **Arduino (Firmata)**. Sugerimos também que você instale o **modo Python** pelo menu de seleção de modos no canto superior direito do IDE, que inicialmente marca `Java` ([instruções detalhadas](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md));
+2. Abra o Processing IDE e pelo menu `Sketch > Import Library... > Add Library...` baixe e instale a biblioteca **Arduino (Firmata)**. Sugerimos também que você instale o **modo Python** pelo menu de seleção de modos no canto superior direito do IDE, que inicialmente marca `Java` ([instruções detalhadas](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md));
 
 3. Faça a conexão dos potenciômetros ao seu Arduino/placa conforme a imagem:
-   4.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
-   4.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
+   3.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
+   3.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
 
 4. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
 > Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
