@@ -28,22 +28,23 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
 ![montagem](assets/montagem-lousa-magica.png)
 
-0. Baixe e instale o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org);
+1. Baixe e instale o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org);
 
-1. Conecte o seu Arduino/placa ao computador, abra o Arduino IDE, localize e abra pelo menu `File > Examples > Firmata` o *sketch* chamado **Firmata All Inputs**, em seguida selecione no menu `Tools > Board:` o modelo da sua placa, e em `Tools > Port` a porta USB/serial em que a placa está conectada ao computador. Por fim use o botão `➔` para fazer o *upload* do *sketch* para a placa.;
+2. Conecte o seu Arduino/placa ao computador, abra o Arduino IDE, localize e abra pelo menu `File > Examples > Firmata` o *sketch* chamado **Firmata All Inputs**, em seguida selecione no menu `Tools > Board:` o modelo da sua placa, e em `Tools > Port` a porta USB/serial em que a placa está conectada ao computador. Por fim use o botão `➔` para fazer o *upload* do *sketch* para a placa.;
 
-2. Abra o Processing IDE e pelo menu `Sketch > Import Library... > Add Library...` baixe e instale a biblioteca **Arduino (Firmata)**. Sugerimos também que você instale o **modo Python** pelo menu de seleção de modos no canto superior direito do IDE, que inicialmente marca `Java` ([instruções detalhadas](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md));
+3. Abra o Processing IDE e pelo menu `Sketch > Import Library... > Add Library...` baixe e instale a biblioteca **Arduino (Firmata)**. Sugerimos também que você instale o **modo Python** pelo menu de seleção de modos no canto superior direito do IDE, que inicialmente marca `Java` ([instruções detalhadas](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md));
 
-3. Faça a conexão dos potenciômetros ao seu Arduino/placa conforme a imagem:
-   3.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
-   3.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
+4. Faça a conexão dos potenciômetros ao seu Arduino/placa conforme a imagem:
 
-4. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
+   4.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
+   4.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
+
+5. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
 > Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
 
-5. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB adequadamente (procure testar usando os números das portas que aparecem no console do Processing);
+6. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB adequadamente (procure testar usando os números das portas que aparecem no console do Processing);
 
-6. Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
+7. Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
 
   * *Lousa mágica*: 
     - [versão com apenas 2 potenciômetros](https://github.com/villares/tree/master/lousa-magica/LousaMagica2pots)
