@@ -24,24 +24,22 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 * Computador com monitor (ou laptop) Linux, Mac ou Windows. Para impressionar as visitas use uma TV grande ou um projetor.
 * Opcionais: botão instantâneo ou interruptor de mercúrio (pode ser usado apenas o teclado do computador) e resistor 10kΩ (caso seja usado um botão/ nterruptor conectado a um pino diferente do D13);
 
-#### Instruções par montagem
+#### Instruções de montagem
 
 ![montagem](assets/montagem-lousa-magica.png)
 
 0. Baixe e instale o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org);
 
-1. Conecte o seu Arduino/placa ao computador e localize nos exemplos do Arduino IDE o *sketch* **Firmata All Inputs**, selecione no menu *Tools*/Ferramentas o modelo da sua placa e a porta serial em que está conectada ao computador. Faça o *Upload* do *sketch* para a placa.;
+1. Conecte o seu Arduino/placa ao computador e localize nos exemplos do Arduino IDE o *sketch* **Firmata All Inputs**, selecione no menu *Tools*/Ferramentas o modelo da sua placa, a porta USB/serial em que está conectada ao computador e em seguida faça o *Upload* do *sketch* para a placa.;
 
-2. Abra o Processing e pelo próprio IDE baixe e instale o [Modo Python](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md) assim como a biblioteca Arduino (Firmata);
+2. Abra o Processing e pelo próprio IDE, no menu `Sketch > Import Library... > Add Library...`, baixe e instale a biblioteca **Arduino (Firmata)**. Sugerimos também que você instale o **modo Python** pelo menu de seleção de modos no canto superior direito do IDE, que inicialmente marca `Java` ([instruções detalhadas](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md));
 
-3. Faça a montagem dos potenciômetros conforme a imagem:
-
+3. Faça a conexão dos potenciômetros ao seu Arduino/placa conforme a imagem:
    4.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
-
    4.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
 
-4. O interruptor (ou botão) para apagar o desenho da *Lousa mágica* deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
-> [Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido]
+4. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
+> Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
 
 5. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e altere o número da porta serial/USB adequadamente (procure testar usando os números das portas que aparecem no console do Processing);
 
@@ -64,10 +62,9 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
 #### Suguestões para uma montagem definitiva
 
-* Alicate;
-* Solda;
-* Interruptor de mercúrio (no lugar do botão para apagar o desenho da *Lousa mágica*).
-* Caixinha com frente transparente, furada para os potenciômetros.
+* Ferramentas: Alicate e solda;
+* Use um interruptor de mercúrio no `D13` em lugar do botão para apagar o desenho da *Lousa mágica*.
+* Monte em uma caixinha com frente transparente, faça furos para os potenciômetros.
 
 #### Mais ideias
 
