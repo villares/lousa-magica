@@ -2,8 +2,9 @@
 
 # Lousa mágica & Lousa paramétrica
 
-Lousa mágica: something like "magic blackboard", was the name in Portugues of the "Etch A Sketch" drawing toy that inspired this project.
-Lousa paramétrica: parametric drawing board
+([Versão em Portugues](/))
+
+*Lousa mágica* is something like "magic blackboard", it was the name in Portuguese of the "Etch A Sketch" drawing toy that inspired this project. Then *Lousa paramétrica* would mean something like "parametric drawing board".
 
 Tools for drawing with potentiometers ([take a look at the GitHub repo!](https://github.com/villares/lousa-magica/))
 
