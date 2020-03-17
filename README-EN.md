@@ -2,19 +2,19 @@
 
 # Lousa mágica & Lousa paramétrica
 
-Lousa mágica: magic drawing board
+Lousa mágica: something like "magic blackboard", was the name in Portugues of the "Etch A Sketch" drawing toy that inspired this project.
 Lousa paramétrica: parametric drawing board
 
-Tools for drawing with wattmeters ([take a look at the GitHub repo!](https://github.com/villares/lousa-magica/))
+Tools for drawing with potentiometers ([take a look at the GitHub repo!](https://github.com/villares/lousa-magica/))
 
 > [![Magic Drawing Board video - Lousa Mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
 > <br />Lousa mágica video at Sesc 24 de maio - credits: [João Adriano Freitas](https://github.com/jaafreitas)
 
 #### Brief history
 
-* *Lousa mágica* was inititally presented by [Estúdio Hacker](http://estudiohacker.io) in the inauguration of [Sesc 24 de Maio](https://www.sescsp.org.br/unidades/36_24+DE+MAIO/#/uaba=programacao#/fdata=id%3D36), on August 2017 (video above). It used 6 wattmeters and supported drawing and erasing drawings by tilting the control box. It was also possible to post *tweets* with the drawing (due to a library).
-* On Estúdio Hacker Day  (September 7th, 2017), also at Sesc 24 de maio, a workshop where the participants set up a version of *Lousa mágica* with 4 wattmeters in a protoboard was held.
-* Setups with 4 wattmeters using a variation of the *Lousa mágica* software and a new version called *Lousa paramétrica* with a recursive parametric drawing of a tree were displayed at [Sesc Art Circuit 2018](https://circuito.sescsp.org.br/).
+* *Lousa mágica* was inititally presented by [Estúdio Hacker](http://estudiohacker.io) in the inauguration of [Sesc 24 de Maio](https://www.sescsp.org.br/unidades/36_24+DE+MAIO/#/uaba=programacao#/fdata=id%3D36), on August 2017 (video above). It used 6 potentiometers and supported drawing and erasing drawings by tilting the control box. It was also possible to post *tweets* with the drawing (due to a library).
+* On Estúdio Hacker Day  (September 7th, 2017), also at Sesc 24 de maio, a workshop where the participants set up a version of *Lousa mágica* with 4 potentiometers in a protoboard was held.
+* Setups with 4 potentiometers using a variation of the *Lousa mágica* software and a new version called *Lousa paramétrica* with a recursive parametric drawing of a tree were displayed at [Sesc Art Circuit 2018](https://circuito.sescsp.org.br/).
 * Several [*sketch-a-day* project](https://villares.github.com/sketch-a-day) drawings can be used with the same setup.
 * `TO DO: more 'usable' drawings links`
 
@@ -22,7 +22,7 @@ Tools for drawing with wattmeters ([take a look at the GitHub repo!](https://git
 
 * Arduino (or variations) with at least 4 analog pins;
 * USB cable to link up the Arduino to the computer;
-* 4 to 6 linear  10kΩ wattmeters (type "B") (you can use 2 or 3 but it's not as cool);
+* 4 to 6 linear  10kΩ potentiometers (type "B") (you can use 2 or 3 but it's not as cool);
 * Protoboard and jumpers;
 * Computer with monitor (or a laptop) Linux, Mac ou Windows. Use a big TV or a projector to make a bigger impact on the guests.
 * Optional: button or mercury switch (the computer keyboard may be used) and 10kΩ resistor  (if it's a button/switch connected to a pin other than `D13`);
@@ -60,7 +60,7 @@ Tools for drawing with wattmeters ([take a look at the GitHub repo!](https://git
 #### Explore other versions in the repo  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
 
   * *Lousa mágica*:
-    - [2 wattmeters version](https://github.com/villares/lousa-magica/tree/master/LousaMagica2pots)
+    - [2 potentiometers version](https://github.com/villares/lousa-magica/tree/master/LousaMagica2pots)
     - [versão em Processing Modo Java](https://github.com/villares/lousa-magica/tree/master/LousaMagica_java)
     - [Sesc Art Circuit 2018 version](https://github.com/villares/lousa-magica/tree/master//lousa_magica_versao_circuito_sesc)
 
@@ -76,13 +76,13 @@ Tools for drawing with wattmeters ([take a look at the GitHub repo!](https://git
 
 #### Definitive setup suggestions
 
-* Tools: pliers and solder;
-* Use a mercury switch instead of a button on `D13` to erase *Lousa mágica*.
-* Setup in a box with a transparent side, with holes for the wattmeters.
+* Tools: pliers and soldering iron;
+* Use a tilt switch (mercury switch) instead of a button on `D13` to erase *Lousa mágica*.
+* Setup in a box with a transparent side, with holes for the potentiometers.
 
 #### Other ideas
 
-* Pong with wattmeters, Dojo version: [`github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot`](https://github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot)
+* Pong with potentiometers, Dojo version: [`github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot`](https://github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot)
 * "Wireless" version made by [João Adriano Freitas](https://github.com/jaafreitas): [`github.com/jaafreitas/LousaMagica`](https://github.com/jaafreitas/LousaMagica)
 
 ----
