@@ -2,7 +2,7 @@
 
 # Lousa mágica & Lousa paramétrica
 
-([Versão em Portugues](/))
+([Versão em Portugues](README.md))
 
 *Lousa mágica* is something like "magic blackboard", it was the name in Portuguese of the "Etch A Sketch" drawing toy that inspired this project. Then *Lousa paramétrica* would mean something like "parametric drawing board".
 
