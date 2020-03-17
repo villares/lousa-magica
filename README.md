@@ -1,6 +1,7 @@
 ----
 
-# Lousa mágica & Lousa paramétrica [(documentation in Emglish)](/README-EN.md))
+# Lousa mágica & Lousa paramétrica 
+### [(English version here)](/README-EN.md))
 
 Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](https://github.com/villares/lousa-magica/))
 
