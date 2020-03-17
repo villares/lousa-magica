@@ -1,12 +1,10 @@
 ----
 
-# Lousa mágica & Lousa paramétrica
-
-([Versão em Portugues](README.md))
-
-*Lousa mágica* is something like "magic blackboard", it was the name in Portuguese of the "Etch A Sketch" drawing toy that inspired this project. Then *Lousa paramétrica* would mean something like "parametric drawing board".
+# Lousa mágica & Lousa paramétrica ([versão em Portugues](README.md))
 
 Tools for drawing with potentiometers ([take a look at the GitHub repo!](https://github.com/villares/lousa-magica/))
+
+*Lousa mágica* is something like "magic blackboard", it was the name in Portuguese of the "Etch A Sketch" drawing toy that inspired this project. Then *Lousa paramétrica* would mean something like "parametric drawing board".
 
 > [![Magic Drawing Board video - Lousa Mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
 > <br />Lousa mágica video at Sesc 24 de maio - credits: [João Adriano Freitas](https://github.com/jaafreitas)
@@ -52,7 +50,7 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 
     > If not using the `D13` pin,  connect the chosen pin terminal to the 10kΩ resistor  (so called *pull-down* resistor) and to the `GND` pin simultaneously. The `D13` has a built-in *pull-down*
 
-6. Copy the code [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) from this repo and  **alter the number of your serial/USB accodingly!** Test using the number of ports that appear in the Processing console, starting from the top of the list: `NUM_PORTA = 0`.;
+6. Copy the code [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) from this repo and  **alter the number of your serial/USB accordingly!** Test using the number of ports that appear in the Processing console, starting from the top of the list: `NUM_PORTA = 0`.;
 
     > Known problems
     > - Linux: confirm you have access to the USB/serial port (as mentioned in item 2).
