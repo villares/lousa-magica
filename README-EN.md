@@ -21,12 +21,12 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 
 #### Materials
 
-* Arduino (or variations) with at least 4 analog pins;
+* Arduino (or similar board) with at least 4 analog pins;
 * USB cable to link up the Arduino to the computer;
 * 4 to 6 linear  10kΩ potentiometers (type "B") (you can use 2 or 3 but it's not as cool);
 * Protoboard and jumpers;
-* Computer with monitor (or a laptop) Linux, Mac ou Windows. Use a big TV or a projector to make a bigger impact on the guests.
-* Optional: button or mercury switch (the computer keyboard may be used) and 10kΩ resistor  (if it's a button/switch connected to a pin other than `D13`);
+* Computer with monitor (or a laptop) Linux, Mac ou Windows. Use a big TV or a projector to make a bigger impact on the guests!
+* Optional: button or mercury tilt switch (the computer keyboard may be used instead) and 10kΩ resistor  (if it's a button/switch connected to a pin other than `D13`);
 
 #### Setup instructions
 
@@ -40,29 +40,29 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
     > - Some Arduino clones need a special USB drive: [How to Install CH340 Drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#drivers-if-you-need-them)
     > - If you use Linux, you might not have permission to access the USB/serial port, which can be corrected by typing the command `sudo usermod -a -G dialout <username>` in the terminal
 
-3. Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`. We suggest you select **Python mode** on top right corner menu of the IDE instead of the default `Java` ([detailed instructions (*portuguese*)](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md));
+3. Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`. We suggest you select **Python mode** on top right corner menu of the IDE instead of the default `Java` ([detailed instructions](https://abav.lugaralgum.com/como-instalar-o-processing-modo-python/index-EN.html));
 
-4. Connect your wattmeter to your Arduino/board according to the image:
+4. Connect each potentiometer to your Arduino/board according to the image:
 
-    4.1 Connect the side terminals of each wattmeter to the `5V` e `GND` pins,
+    4.1 Connect the side terminals of each potentiometer to the `5V` e `GND` pins,
 
     4.2 Connect the central terminals to the board's analog pins: `A1`, `A2`, `A3` e `A4`;
 
-5. Optionally, if you chose to use a button/switch to erase the *Lousa mágica*, it must be connected to the `Digital 13` pin and `5V` pin;
+5. Optionally, if you chose to use a button/switch to erase the drawing in *Lousa mágica*, it must be connected to the `Digital 13` pin and `5V` pin;
 
-    > If not using the `D13` pin,  connect the chosen pin terminal to the 10kΩ resistor  (so called *pull-down* resistor) and to the `GND` pin simultaneously. The `D13` has a built in *pull-down*
+    > If not using the `D13` pin,  connect the chosen pin terminal to the 10kΩ resistor  (so called *pull-down* resistor) and to the `GND` pin simultaneously. The `D13` has a built-in *pull-down*
 
-6. Copy the code [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) from this repo and  **alter the number of your serial/USB correctly!** Test using the number of ports that appear in the Processing console, starting from the top of the list: `NUM_PORTA = 0`.;
+6. Copy the code [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) from this repo and  **alter the number of your serial/USB accodingly!** Test using the number of ports that appear in the Processing console, starting from the top of the list: `NUM_PORTA = 0`.;
 
     > Known problems
     > - Linux: confirm you have access to the USB/serial port (as mentioned in item 2).
-    > - 64-bits Windows: Processing might download the incorrect version (32 bits) of the Python mode library. You can solve this by deleting or renaming the file in `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` as documented in [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
+    > - 64-bits Windows: Processing might download the incorrect version (32 bits) of the serial library. You can solve this by deleting or renaming the file in `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` as documented in [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
 
 #### Explore other versions in the repo  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
 
   * *Lousa mágica*:
     - [2 potentiometers version](https://github.com/villares/lousa-magica/tree/master/LousaMagica2pots)
-    - [versão em Processing Modo Java](https://github.com/villares/lousa-magica/tree/master/LousaMagica_java)
+    - [Processing Java mode](https://github.com/villares/lousa-magica/tree/master/LousaMagica_java)
     - [Sesc Art Circuit 2018 version](https://github.com/villares/lousa-magica/tree/master//lousa_magica_versao_circuito_sesc)
 
   * *Lousa paramétrica*:  
@@ -78,8 +78,8 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 #### Definitive setup suggestions
 
 * Tools: pliers and soldering iron;
-* Use a tilt switch (mercury switch) instead of a button on `D13` to erase *Lousa mágica*.
-* Setup in a box with a transparent side, with holes for the potentiometers.
+* Use a tilt switch (mercury switch) instead of a button on `D13` to erase drawings in *Lousa mágica*.
+* Setup in a box with a transparent panel, with holes for the potentiometers.
 
 #### Other ideas
 
