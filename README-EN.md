@@ -12,9 +12,9 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 
 #### Brief history
 
-* *Lousa mágica* was inititally presented by [Estúdio Hacker](http://estudiohacker.io) in the inauguration of [Sesc 24 de Maio](https://www.sescsp.org.br/unidades/36_24+DE+MAIO/#/uaba=programacao#/fdata=id%3D36), on August 2017 (video above). It used 6 potentiometers and supported drawing and erasing drawings by tilting the control box. It was also possible to post *tweets* with the drawing (due to a library).
-* On Estúdio Hacker Day  (September 7th, 2017), also at Sesc 24 de maio, a workshop where the participants set up a version of *Lousa mágica* with 4 potentiometers in a protoboard was held.
-* Setups with 4 potentiometers using a variation of the *Lousa mágica* software and a new version called *Lousa paramétrica* with a recursive parametric drawing of a tree were displayed at [Sesc Art Circuit 2018](https://circuito.sescsp.org.br/).
+* *Lousa mágica* was inititally presented by [Estúdio Hacker](http://estudiohacker.io) in the inauguration of [Sesc 24 de Maio](https://www.sescsp.org.br/unidades/36_24+DE+MAIO/#/uaba=programacao#/fdata=id%3D36), on August 2017 (video above). It used 6 potentiometers and supported drawing and erasing drawings by tilting the control box. It was also possible to post *tweets* with the drawing (using a library).
+* On Estúdio Hacker Day  (September 7th, 2017), also at Sesc 24 de maio, a workshop was held where the participants set up a version of *Lousa mágica* with 4 potentiometers in a protoboard.
+* Setups with 4 potentiometers using a variation of the *Lousa mágica* software and a new version called *Lousa paramétrica* with a recursive parametric drawing of a tree were displayed at the [Sesc Art Circuit 2018](https://circuito.sescsp.org.br/).
 * Several [*sketch-a-day* project](https://villares.github.com/sketch-a-day) drawings can be used with the same setup.
 * `TO DO: more 'usable' drawings links`
 
@@ -24,7 +24,7 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 * USB cable to link up the Arduino to the computer;
 * 4 to 6 linear  10kΩ potentiometers (type "B") (you can use 2 or 3 but it's not as cool);
 * Protoboard and jumpers;
-* Computer with monitor (or a laptop) Linux, Mac ou Windows. Use a big TV or a projector to make a bigger impact on the guests!
+* Computer and monitor (or a laptop) running Linux, Mac or Windows. Use a big TV or a projector for bigger impact on guests!
 * Optional: button or mercury tilt switch (the computer keyboard may be used instead) and 10kΩ resistor  (if it's a button/switch connected to a pin other than `D13`);
 
 #### Setup instructions
