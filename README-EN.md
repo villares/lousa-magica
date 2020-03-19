@@ -36,10 +36,10 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 2. Connect your Arduino/board to your computer, open the Arduino IDE, and in the menu `File > Examples > Firmata` look for the *sketch* called **Firmata All Inputs**. Next, select your board's model in `Tools > Board:` , and in `Tools > Port`, the USB/serial port the board is connected to. Lastly, click the `➔` button to upload the sketch to the board;
 
     > Known problems:
-    > - Some Arduino clones need a special USB drive: [How to Install CH340 Drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#drivers-if-you-need-them)
-    > - If you use Linux, you might not have permission to access the USB/serial port, which can be corrected by typing the command `sudo usermod -a -G dialout <username>` in the terminal
+    > - Some Arduino clones need a special USB driver: [How to Install CH340 Drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#drivers-if-you-need-them)
+    > - If you use Linux, you might not have permission to access the USB/serial port, that can be corrected by typing `sudo usermod -a -G dialout <your username>` in your shell prompt.
 
-3. Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`. We suggest you select **Python mode** on top right corner menu of the IDE instead of the default `Java` ([detailed instructions](https://abav.lugaralgum.com/como-instalar-o-processing-modo-python/index-EN.html));
+3. Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`. We suggest you select **Python mode** on top right corner menu of the IDE instead of the default `Java` ([detailed instructions here](https://abav.lugaralgum.com/como-instalar-o-processing-modo-python/index-EN.html));
 
 4. Connect each potentiometer to your Arduino/board according to the image:
 
