@@ -55,7 +55,7 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
     > Problemas conhecidos:
     > - No Linux, confirme a permissão de acesso à porta USB/serial (mencionados no final do item 2).
-    > - No Windows 64-bits o Processing modo Python pode tentar carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como domentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
+    > - No Windows 64-bits o Processing modo Python pode tentar carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como documentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
 
 #### Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
 
