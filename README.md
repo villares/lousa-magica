@@ -38,6 +38,7 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
     > - Alguns clones de Arduino precisam de um driver USB especial: [How to Install CH340 Drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#drivers-if-you-need-them)
     > - No Linux, você pode estar sem permissão de acesso à porta USB/serial, o que pode ser corrigido
     > abrindo uma janela de terminal e digitando na linha de comando `sudo usermod -a -G dialout <seu nome de usuário do linux aqui>`
+    > ou, caso o anterior não resolva, `sudo chmod a+rw /dev/ttyACM0`  (troque `ttyACM0` pelo nome da sua porta, como por exemplo `ttyUSB0`) 
 
 3. Abra o Processing IDE e pelo menu `Sketch > Import Library... > Add Library...` baixe e instale a biblioteca **Arduino (Firmata)**. Sugerimos também que você instale o **modo Python** pelo menu de seleção de modos no canto superior direito do IDE, que inicialmente marca `Java` ([instruções detalhadas](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md));
 
