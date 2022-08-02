@@ -47,15 +47,18 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
     3.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
 
     3.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
+    4.
 4. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
 
     > Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
 
 5. Veja as intruções para a parte de software, que desenha na tela:
 
-    A. [Versão inicial com Processing modo Python](Processing-modo-Python) (não está funcionando atualmente)
-    B. [Versão com Processing modo Java](Processing-modo-Java)       
-    C. [Versão com Thonny IDE, py5 e pyfirmata](Thonny-py5) EN ANDAMENTO!
+    A. [Versão inicial com Processing modo Python](Processing-modo-Python.md) (não está funcionando atualmente)
+    
+    B. [Versão com Processing modo Java](Processing-modo-Java.md)       
+    
+    C. [Versão com Thonny IDE, py5 e pyfirmata](Thonny-py5.md) EN ANDAMENTO!
     
 #### Exemplo de montagem com Arduino Nano
 
