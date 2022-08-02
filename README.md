@@ -15,6 +15,8 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 * No Estúdio Hacker Day em 7 de setembro de 2017, também no Sesc 24 de maio, foi realizada atividade em que os participantes montavam uma versão da *Lousa mágica* com 4 potenciômetros em uma protoboard.
 * Para o Circuito Sesc de Artes 2018 foram feitas montagens com 4 potenciômetros com uma variante do software da *Lousa mágica* e uma versão nova chamada *Lousa paramétrica* com um desenho paramétrico recursivo de uma árvore.
 * Diversos desenhos do projeto [*sketch-a-day*](https://villares.github.com/sketch-a-day) podem ser usados com a mesma montagem.
+* A partir de 2020 o Processing modo Python passou a ter problemas em carregar a biblioteca *Serial* que é necessária para a comunicação com *Firmata* tornando difícil a utilização deste projeto.
+* Em 2022 acrescentada uma versão para uso com Thonny IDE e a biblioteca py5
 * `TO DO: links de outros desenhos 'ajustáveis'`
 
 #### Lista de materiais
@@ -30,7 +32,7 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
 ![montagem](assets/montagem-lousa-magica.png)
 
-1. Baixe e instale o IDE do [Arduino](http://arduino.cc) e o IDE do [Processing](http://processing.org);
+1. Baixe e instale o IDE do [Arduino](http://arduino.cc);
 
 2. Conecte o seu Arduino/placa ao computador, abra o Arduino IDE, localize e abra pelo menu `File > Examples > Firmata` o *sketch* chamado **Firmata All Inputs**, em seguida selecione no menu `Tools > Board:` o modelo da sua placa, e em `Tools > Port` a porta USB/serial em que a placa está conectada ao computador. Por fim use o botão `➔` para fazer o *upload* do *sketch* para a placa.;
 
@@ -40,37 +42,21 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
     > abrindo uma janela de terminal e digitando na linha de comando `sudo usermod -a -G dialout <seu nome de usuário do linux aqui>`
     > ou, caso o anterior não resolva, `sudo chmod a+rw /dev/ttyACM0`  (troque `ttyACM0` pelo nome da sua porta, como por exemplo `ttyUSB0`) 
 
-3. Abra o Processing IDE e pelo menu `Sketch > Import Library... > Add Library...` baixe e instale a biblioteca **Arduino (Firmata)**. Sugerimos também que você instale o **modo Python** pelo menu de seleção de modos no canto superior direito do IDE, que inicialmente marca `Java` ([instruções detalhadas](https://github.com/villares/villares.github.io/blob/master/como-instalar-o-processing-modo-python/index.md));
+3. Faça a conexão dos potenciômetros ao seu Arduino/placa conforme a imagem:
 
-4. Faça a conexão dos potenciômetros ao seu Arduino/placa conforme a imagem:
+    3.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
 
-    4.1 Conecte os terminais laterias de cada potenciômetro aos pinos `5V` e `GND`,
-
-    4.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
-
-5. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
+    3.2 Conecte os terminais centrais deles aos pinos analógicos do Arduino: `A1`, `A2`, `A3` e `A4`;
+4. Opcionalmente, se for usar um interruptor (ou botão) para apagar o desenho da *Lousa mágica*, este deve ter um terminal conectado ao pino `Digital 13` e o outro à alimentação `5V`;
 
     > Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
 
-6. Copie o código [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) deste repositório e **altere o número da porta serial/USB adequadamente!** Procure testar usando os números das portas que aparecem no console do Processing, começando pela primeira da lista: `NUM_PORTA = 0`.;
+5. Veja as intruções para a parte de software, que desenha na tela:
 
-    > Problemas conhecidos:
-    > - No Linux, confirme a permissão de acesso à porta USB/serial (mencionados no final do item 2).
-    > - No Windows 64-bits o Processing modo Python pode tentar carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como documentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
-
-#### Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
-
-  * *Lousa mágica*: 
-    - [versão com apenas 2 potenciômetros](https://github.com/villares/lousa-magica/tree/master/LousaMagica2pots)
-    - [versão em Processing Modo Java](https://github.com/villares/lousa-magica/tree/master/LousaMagica_java)
-    - [versão Circuito Sesc de Artes 2018](https://github.com/villares/lousa-magica/tree/master//lousa_magica_versao_circuito_sesc)
-
-  * *Lousa paramétrica*:  
-    - [*Árvore recursiva* (Circuito Sesc de Artes 2018)](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_arvore_circuito_sesc)
-    - [*Grafos*](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_grafos)
-    - [*Polígonos recursivos*](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_poligonos_recursivos)
-    - Procure mais *sketches* no repositório [`villares.github.com/sketch-a-day`](https://villares.github.com/sketch-a-day)
-
+    A. [Versão inicial com Processing modo Python](Processing-modo-Python) (não está funcionando atualmente)
+    B. [Versão com Processing modo Java](Processing-modo-Java)       
+    C. [Versão com Thonny IDE, py5 e pyfirmata](Thonny-py5) EN ANDAMENTO!
+    
 #### Exemplo de montagem com Arduino Nano
 
 ![montagem](assets/montagem2.png)
