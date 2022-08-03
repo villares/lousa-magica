@@ -12,7 +12,7 @@ import processing.serial.*;
 import cc.arduino.*;
 
 Arduino arduino;
-int numPorta = 0;  // Precisa mudar!
+int numPorta = 32;  // Precisa mudar!
 
 void setup() {
   size(512, 512);
@@ -25,8 +25,8 @@ void setup() {
 }
 
 void draw() {
-  float X = map(arduino.analogRead(1), 0, 1023, 0, width)
-  float Y = map(arduino.analogRead(4), 0, 1023, 0, height)
+  float X = map(arduino.analogRead(1), 0, 1023, 0, width);
+  float Y = map(arduino.analogRead(4), 0, 1023, 0, height);
   float tam = arduino.analogRead(2)/10;  // Tamanho
   float sat = arduino.analogRead(3)/4;   // Saturação
   float opa = 255;  // Opacidade/Alpha
