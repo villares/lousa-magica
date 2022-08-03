@@ -1,23 +1,18 @@
 """
-árvore do circuito SESC - alexandre B A villares
-http://estudiohacker.io
+Alexandre B A Villares
+Árvore do Circuito SESC 2018 - v2022_08_02
+https://abav.lugaralgum.com/lousa-magica
+
+Para executar é necessário:
+py5 (sketch_runner ou imported mode no Thonny IDE) e PyFirmata 
 """
-
-import pyfirmata
-
 
 def setup():
     global arduino
     size(600, 600)
     color_mode(HSB)
-    # escolhe a porta do Arduino ou reverte para sliders
-    arduino = pyfirmata.Arduino('/dev/ttyUSB0')
-    pyfirmata.util.Iterator(arduino).start()
-    for i in range(1, 5):
-        arduino.analog[i].enable_reporting()
-    arduino.analog_read = (lambda p: arduino.analog[p].read() * 1024
-                           if arduino.analog[p].read() is not None
-                           else 0)
+    arduino = get_arduino(0) # Or try port name like 'COM3' or '/dev/ttyUSB0' 
+ 
 def draw():
     global a, b, c, d
     background(0)
@@ -63,3 +58,48 @@ def branch(gen, theta, branch_size):
 def key_pressed():
     if key == 'p':
         save_frame("lousa-02-####.png")
+
+def get_arduino(port=None):
+    """
+    This is a PyFirmata 'helper' that tries to connect to
+    an Arduino compatible board.
+    
+    If port is None it tries to connect to the last port
+    listed by pyserial's serial.tools.list_ports.comports().
+    You can provide a string with the port name or an integer
+    index to the port (as listed by pyserial and printed in
+    the console if no port is provided)
+    
+    If successful it returns a pyfirmata Arduino object, but
+    before that it starts a pyfirmata.util.Iterator, and adds
+    to it analog_read() and digital_read() functions that mimic
+    Processing's Firmata library interface.
+    """
+    from pyfirmata import Arduino, util
+    from serial.tools import list_ports
+    ports = [comport.device for comport in list_ports.comports()]
+    if not ports:
+        raise Exception('No board/Arduino port found')
+    elif port is None:
+        print('\n'.join(f'{i}: {p}' for i, p in enumerate(ports)))
+        port = len(ports) - 1
+    if isinstance(port, str):
+        print(f'Trying to connect to port: {port}')
+        arduino = Arduino(port)
+    else:
+        print(f'Trying to connect to port {port}: {ports[port]}')
+        arduino = Arduino(ports[port])
+    util.Iterator(arduino).start()
+    for a in range(6):  # A0 A1 A2 A3 A4 A5
+        arduino.analog[a].enable_reporting()
+    arduino.analog_read = (lambda a: arduino.analog[a].read() * 1024
+                           if arduino.analog[a].read() is not None
+                           else 0)
+    digital_pin_dict = {d: arduino.get_pin(f'd:{d}:i')
+                        for d in range(2, 14)}
+    for d in digital_pin_dict.keys():
+        digital_pin_dict[d].enable_reporting()
+    arduino.digital_read = (lambda d: digital_pin_dict[d].read()
+                            if digital_pin_dict[d].read() is not None
+                            else False)
+    return arduino
