@@ -6,10 +6,10 @@
 
 Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](https://github.com/villares/lousa-magica/))
 
+### Breve histórico
+
 > [![Vídeo da lousa mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
 > <br />Vídeo da Lousa mágina no Sesc 24 de maio - crédito: [João Adriano Freitas](https://github.com/jaafreitas)
-
-### Breve histórico
 
 * A *Lousa mágica* foi apresentada inicialmente em conjunto com as atividades do [Estúdio Hacker](http://estudiohacker.io) na inauguração do Sesc 24 de Maio, em agosto de 2017 (vídeo acima). Usando 6 potenciômetros, permitia desenhar e o desenho podia ser apagado tombando a caixa de controle.
 
