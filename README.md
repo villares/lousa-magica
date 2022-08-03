@@ -9,21 +9,28 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 > [![Vídeo da lousa mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
 > <br />Vídeo da Lousa mágina no Sesc 24 de maio - crédito: [João Adriano Freitas](https://github.com/jaafreitas)
 
-#### Breve histórico
+### Breve histórico
 
-* A *Lousa mágica* foi apresentada inicialmente em conjunto com as atividades do [Estúdio Hacker](http://estudiohacker.io) na inauguração do Sesc 24 de Maio, em agosto de 2017 (vídeo acima). Usando 6 potenciômetros, permitia desenhar e o desenho podia ser apagado tombando a caixa de controle. Também era possível (por conta de uma biblioteca) postar *tweets* com o desenho.
+* A *Lousa mágica* foi apresentada inicialmente em conjunto com as atividades do [Estúdio Hacker](http://estudiohacker.io) na inauguração do Sesc 24 de Maio, em agosto de 2017 (vídeo acima). Usando 6 potenciômetros, permitia desenhar e o desenho podia ser apagado tombando a caixa de controle.
 
-![tweet da inauguração do Sesc 24 de maio](https://user-images.githubusercontent.com/3694604/182716588-bd2c7421-f3fa-45b2-b355-ad4d7b6ee68f.png)
+> ![tweet da inauguração do Sesc 24 de maio](https://user-images.githubusercontent.com/3694604/182716588-bd2c7421-f3fa-45b2-b355-ad4d7b6ee68f.png)
+> Também era possível postar automaticamente o desenho em um *tweet* (usando uma biblioteca que acessava a API do Twitter e as credencias da conta do Estúdio Hacker).
 
 * No Estúdio Hacker Day em 7 de setembro de 2017, também no Sesc 24 de maio, foi realizada atividade em que os participantes montavam uma versão da *Lousa mágica* com 4 potenciômetros em uma protoboard.
+
 * Para o Circuito Sesc de Artes 2018 foram feitas montagens com 4 potenciômetros com uma variante do software da *Lousa mágica* e uma versão nova chamada *Lousa paramétrica* com um desenho paramétrico recursivo de uma árvore.
 
 ![Amostra de imagens produzidas](https://user-images.githubusercontent.com/3694604/182716439-e7de967b-ac41-45a5-b437-0427757c7be2.png)
 
-* Diversos desenhos do projeto [*sketch-a-day*](https://villares.github.com/sketch-a-day) podem ser usados com a mesma montagem.
+* Diversos desenhos do projeto [*sketch-a-day*](https://villares.github.com/sketch-a-day) foram feitos para ser usados com a mesma montagem.
+
 * A partir de 2020 o Processing modo Python passou a ter problemas em carregar a biblioteca *Serial* que é necessária para a comunicação com *Firmata* tornando difícil a utilização deste projeto.
-* Em 2022 acrescentada uma versão para uso com Thonny IDE e a biblioteca py5
-* `TO DO: links de outros desenhos 'ajustáveis'`
+
+* Em 2022 foi acrescentada uma versão para uso com [Thonny IDE e a biblioteca py5](https://abav.lugaralgum.com/como-instalar-py5/)
+
+* `TO DO: links de outros desenhos 'paramétricos' feitos para modificar com potenciômetros`
+
+### Instruções de montagem
 
 #### Lista de materiais
 
@@ -34,9 +41,9 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 * Computador com monitor (ou laptop) Linux, Mac ou Windows. Para impressionar as visitas use uma TV grande ou um projetor.
 * Opcional: Botão instantâneo ou interruptor de mercúrio (pode ser usado apenas o teclado do computador) e resistor 10kΩ (caso seja usado um botão/interruptor conectado a um pino diferente do `D13`);
 
-#### Instruções de montagem
-
 ![montagem](assets/montagem-lousa-magica.png)
+
+#### Passo a passo
 
 1. Baixe e instale o IDE do [Arduino](http://arduino.cc);
 
@@ -58,13 +65,13 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
     > Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
 
-5. Veja as intruções para a parte de software, que desenha na tela:
+5. Veja as intruções para alguma das variantes da parte do software que desenha na tela:
 
     A. [Versão inicial com Processing modo Python](Processing-modo-Python.md) (não está funcionando atualmente)
     
     B. [Versão com Processing modo Java](Processing-modo-Java.md)       
     
-    C. [Versão com Thonny IDE, py5 e pyfirmata](Thonny-py5.md) EN ANDAMENTO!
+    C. [Versão com Thonny IDE, py5 e pyfirmata](Thonny-py5.md)
     
 #### Exemplo de montagem com Arduino Nano
 
@@ -76,9 +83,9 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 * Use um interruptor de mercúrio no `D13` em lugar do botão para apagar o desenho da *Lousa mágica*.
 * Monte em uma caixinha com frente transparente, faça furos para os potenciômetros.
 
-#### Mais ideias
+#### Outras ideias
 
-* Pong com potenciômetros, versão Dojo: [`github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot`](https://github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot)
+* Pong com potenciômetros, versão Dojo: [`github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot`](https://github.com/arteprog/cursos/tree/master/DOJO-pong-com-pot) [REVISAR!]
 * Versão "sem fio" feita pelo [João Adriano Freitas](https://github.com/jaafreitas): [`github.com/jaafreitas/LousaMagica`](https://github.com/jaafreitas/LousaMagica)
 
 ----
