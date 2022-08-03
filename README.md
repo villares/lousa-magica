@@ -69,7 +69,7 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
     A. [Versão inicial com Processing modo Python](Processing-modo-Python.md) (não está funcionando atualmente)
     
-    B. [Versão com Processing modo Java](Processing-modo-Java.md)       
+    B. [Versão com Processing modo Java](Processing-modo-Java.md)
     
     C. [Versão com Thonny IDE, py5 e pyfirmata](Thonny-py5.md)
     

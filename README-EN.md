@@ -1,20 +1,22 @@
 ----
 
 # Lousa mágica & Lousa paramétrica
+
 #### ([versão em Português](README.md))
 
 Tools for drawing with potentiometers ([take a look at the GitHub repo!](https://github.com/villares/lousa-magica/))
 
 *Lousa mágica* is something like "magic blackboard", it was the name in Portuguese of the "Etch A Sketch" drawing toy that inspired this project. Then *Lousa paramétrica* would mean something like "parametric drawing board".
 
+### Brief history
+
 > [![Magic Drawing Board video - Lousa Mágica](https://img.youtube.com/vi/D5Ha1bhqBuQ/0.jpg)](https://www.youtube.com/watch?v=D5Ha1bhqBuQ)
 > <br />Lousa mágica video at Sesc 24 de maio - credits: [João Adriano Freitas](https://github.com/jaafreitas)
 
-#### Brief history
+* *Lousa mágica* was inititally presented as part of [Estúdio Hacker](http://estudiohacker.io) activities at the inauguration of [Sesc 24 de Maio](https://www.sescsp.org.br/unidades/36_24+DE+MAIO/#/uaba=programacao#/fdata=id%3D36), on August 2017 (video above). It used 6 potentiometers for drawing and drawings could be erased by tilting the control box. 
 
-* *Lousa mágica* was inititally presented as part of [Estúdio Hacker](http://estudiohacker.io) activities at the inauguration of [Sesc 24 de Maio](https://www.sescsp.org.br/unidades/36_24+DE+MAIO/#/uaba=programacao#/fdata=id%3D36), on August 2017 (video above). It used 6 potentiometers for drawing and drawings could be erased by tilting the control box. It was also possible to post *tweets* with the drawing content (using a Twitter API library).
-
-![tweet from Sesc 24 de maio inauguration](https://user-images.githubusercontent.com/3694604/182716588-bd2c7421-f3fa-45b2-b355-ad4d7b6ee68f.png)
+> ![tweet from Sesc 24 de maio inauguration](https://user-images.githubusercontent.com/3694604/182716588-bd2c7421-f3fa-45b2-b355-ad4d7b6ee68f.png)
+> It was also possible to post *tweets* with the drawing content (using a Twitter API library).
 
 * On Estúdio Hacker Day  (September 7th, 2017), also at Sesc 24 de maio, a workshop was held where the participants set up a version of *Lousa mágica* with 4 potentiometers in a protoboard.
 
@@ -22,8 +24,11 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 
 ![Sample of images created by participants](https://user-images.githubusercontent.com/3694604/182716439-e7de967b-ac41-45a5-b437-0427757c7be2.png)
 
-* Several [*sketch-a-day* project](https://villares.github.com/sketch-a-day) drawings can be used with the same setup.
-* `TO DO: more 'usable' drawings links`
+* Several [*sketch-a-day* project](https://villares.github.com/sketch-a-day) drawings were made to be used with the same setup.
+
+* `TO DO: Add links to other 'parametric' drawings that can be modified with pots`
+
+### Setup instructions
 
 #### Materials
 
@@ -33,8 +38,6 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 * Protoboard and jumpers;
 * Computer and monitor (or a laptop) running Linux, Mac or Windows. Use a big TV or a projector for bigger impact on guests!
 * Optional: button or mercury tilt switch (the computer keyboard may be used instead) and 10kΩ resistor  (if it's a button/switch connected to a pin other than `D13`);
-
-#### Setup instructions
 
 ![setup](assets/montagem-lousa-magica.png)
 
@@ -59,27 +62,15 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 5. Now the software part, for drawing in the screen:
 
     5.A  To use in the Processing IDE:
-    - Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`. 
-    - 5.A.A  Copy the [code for Processing Python Mode](Processing-modo-Python.md) (not working)
-    - 5.A.B  Copy the [code for Processing Java Mode](Processing-modo-Java.md) 
+    - Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`; 
+    - Copy from [code for Processing Python Mode](Processing-modo-Python.md) (not working at this time due to Serial library issues) or;
+    - Copy from [code for Processing Java Mode](Processing-modo-Java.md). 
             
     5.B  To use with Thonny IDE, py5 and pyfirmata
-    - [Install Thonny and the thonny-py5mode plug-in](https://abav.lugaralgum.com/como-instalar-py5/index-EN.html#how-to-install-py5);            
-    - Inside Thonny IDE, select `Tools > Manage Packages...` and instal **pyFirmata**;
+    - [Install Thonny and the thonny-py5mode plug-in](https://abav.lugaralgum.com/como-instalar-py5/index-EN.html#how-to-install-py5);
+    - Inside Thonny IDE, select `Tools > Manage Packages...` and install **pyFirmata**;
     - Copy code from [LousaMagica_py5.py](LousaMagica_py5/LousaMagica_py5.py) or [lousa_parametrica_arvore_py5.py](lousa_parametrica_arvore_py5/lousa_parametrica_arvore_py5.py).
 
-#### Explore other versions in the repo  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
-
-  * *Lousa mágica*:
-    - [2 potentiometers version](https://github.com/villares/lousa-magica/tree/master/LousaMagica2pots)
-    - [Processing Java mode](https://github.com/villares/lousa-magica/tree/master/LousaMagica_java)
-    - [Sesc Art Circuit 2018 version](https://github.com/villares/lousa-magica/tree/master//lousa_magica_versao_circuito_sesc)
-
-  * *Lousa paramétrica*:  
-    - [*Recursive tree* (Sesc Art Circuit 2018)](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_arvore_circuito_sesc)
-    - [*Graphs*](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_grafos)
-    - [*Recursive polygons version*](https://github.com/villares/lousa-magica/tree/master/lousa_parametrica_poligonos_recursivos)
-    - Look for more *sketches* in the repo [`villares.github.com/sketch-a-day`](https://villares.github.com/sketch-a-day)
 
 #### Arduino Nano example
 
