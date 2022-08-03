@@ -65,7 +65,7 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
     > Se não for usar o pino `D13`,  conecte simultaneamente o terminal do pino escolhido ao resistor de 10kΩ (é o chamado resistor  *pull-down*, e deve então ser conectado ao `GND`). O pino `D13` já tem um *pull-down* embutido
 
-5. Veja as intruções para alguma das variantes da parte do software que desenha na tela:
+5. Veja as instruções para alguma das variantes da parte do software que desenha na tela:
 
     A. [Versão inicial com Processing modo Python](Processing-modo-Python.md) (não está funcionando atualmente)
     
