@@ -13,8 +13,15 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 #### Brief history
 
 * *Lousa mágica* was inititally presented as part of [Estúdio Hacker](http://estudiohacker.io) activities at the inauguration of [Sesc 24 de Maio](https://www.sescsp.org.br/unidades/36_24+DE+MAIO/#/uaba=programacao#/fdata=id%3D36), on August 2017 (video above). It used 6 potentiometers for drawing and drawings could be erased by tilting the control box. It was also possible to post *tweets* with the drawing content (using a Twitter API library).
+
+![tweet from Sesc 24 de maio inauguration](https://user-images.githubusercontent.com/3694604/182716588-bd2c7421-f3fa-45b2-b355-ad4d7b6ee68f.png)
+
 * On Estúdio Hacker Day  (September 7th, 2017), also at Sesc 24 de maio, a workshop was held where the participants set up a version of *Lousa mágica* with 4 potentiometers in a protoboard.
+
 * Setups with 4 potentiometers using a variation of the *Lousa mágica* software and a new version called *Lousa paramétrica* with a recursive parametric drawing of a tree were displayed at the [Sesc Art Circuit 2018](https://circuito.sescsp.org.br/).
+
+![Sample of images created by participants](https://user-images.githubusercontent.com/3694604/182716439-e7de967b-ac41-45a5-b437-0427757c7be2.png)
+
 * Several [*sketch-a-day* project](https://villares.github.com/sketch-a-day) drawings can be used with the same setup.
 * `TO DO: more 'usable' drawings links`
 
