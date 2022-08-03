@@ -31,7 +31,7 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 
 ![setup](assets/montagem-lousa-magica.png)
 
-1. Download and install the [Arduino IDE](http://arduino.cc) and the [Processing IDE](http://processing.org);
+1. Download and install the [Arduino IDE](http://arduino.cc);
 
 2. Connect your Arduino/board to your computer, open the Arduino IDE, and in the menu `File > Examples > Firmata` look for the *sketch* called **Firmata All Inputs**. Next, select your board's model in `Tools > Board:` , and in `Tools > Port`, the USB/serial port the board is connected to. Lastly, click the `➔` button to upload the sketch to the board;
 
@@ -39,23 +39,26 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
     > - Some Arduino clones need a special USB driver: [How to Install CH340 Drivers](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#drivers-if-you-need-them)
     > - If you use Linux, you might not have permission to access the USB/serial port, that can be corrected by typing `sudo usermod -a -G dialout <your username>` in your shell prompt.
 
-3. Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`. We suggest you select **Python mode** on top right corner menu of the IDE instead of the default `Java` ([detailed instructions here](https://abav.lugaralgum.com/como-instalar-o-processing-modo-python/index-EN.html));
-
-4. Connect each potentiometer to your Arduino/board according to the image:
+3. Connect each potentiometer to your Arduino/board according to the image:
 
     4.1 Connect the side terminals of each potentiometer to the `5V` e `GND` pins,
 
     4.2 Connect the central terminals to the board's analog pins: `A1`, `A2`, `A3` e `A4`;
 
-5. Optionally, if you chose to use a button/switch to erase the drawing in *Lousa mágica*, it must be connected to the `Digital 13` pin and `5V` pin;
+4. Optionally, if you chose to use a button/switch to erase the drawing in *Lousa mágica*, it must be connected to the `Digital 13` pin and `5V` pin;
 
     > If not using the `D13` pin,  connect the chosen pin terminal to the 10kΩ resistor  (so called *pull-down* resistor) and to the `GND` pin simultaneously. The `D13` has a built-in *pull-down*
 
-6. Copy the code [`LousaMagica.pyde`](LousaMagica/LousaMagica.pyde) from this repo and  **alter the number of your serial/USB accordingly!** Test using the number of ports that appear in the Processing console, starting from the top of the list: `NUM_PORTA = 0`.;
+5. Now the software part, for drawing in the screen:
 
-    > Known problems
-    > - Linux: confirm you have access to the USB/serial port (as mentioned in item 2).
-    > - 64-bits Windows: Processing might download the incorrect version (32 bits) of the serial library. You can solve this by deleting or renaming the file in `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` as documented in [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
+    5.A  To use in the Processing IDE:
+           Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`. 
+            5.A.A  Copy the [code for Processing Python Mode](Processing-modo-Python.md) (not working)
+            5.A.B  Copy the [code for Processing Java Mode](Processing-modo-Java.md) 
+    5.B  To use with Thonny IDE, py5 and pyfirmata
+            [Install Thonny and the thonny-py5mode plug-in](https://abav.lugaralgum.com/como-instalar-py5/index-EN.html#how-to-install-py5);
+            Inside Thonny IDE, select `Tools > Manage Packages...` and instal **pyFirmata**;
+            Copy code from [LousaMagica_py5.py](LousaMagica_py5/LousaMagica_py5.py) or [lousa_parametrica_arvore_py5.py](lousa_parametrica_arvore_py5/lousa_parametrica_arvore_py5.py).
 
 #### Explore other versions in the repo  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
 
