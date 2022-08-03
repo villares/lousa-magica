@@ -48,8 +48,10 @@ def get_arduino(port=None):
     If successful it returns a pyfirmata Arduino object, but
     before that it starts a pyfirmata.util.Iterator, and adds
     to it analog_read() and digital_read() functions that mimic
-    Processing's Firmata library interface.
+    Processing's Firmata library interface (readings are never
+    None, and analog pins return a value between 0 and 1023).
     """
+    
     from pyfirmata import Arduino, util
     from serial.tools import list_ports
     ports = [comport.device for comport in list_ports.comports()]
@@ -67,7 +69,7 @@ def get_arduino(port=None):
     util.Iterator(arduino).start()
     for a in range(6):  # A0 A1 A2 A3 A4 A5
         arduino.analog[a].enable_reporting()
-    arduino.analog_read = (lambda a: arduino.analog[a].read() * 1024
+    arduino.analog_read = (lambda a: round(arduino.analog[a].read() * 1023)
                            if arduino.analog[a].read() is not None
                            else 0)
     digital_pin_dict = {d: arduino.get_pin(f'd:{d}:i')
