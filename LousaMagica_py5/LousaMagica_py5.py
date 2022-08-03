@@ -1,8 +1,10 @@
-# Licença GPL3 - mas atribuição é apreciada!
 """
 Alexandre B A Villares
-desenho com potenciômetros
+Lousa-mágica - desenho com potenciômetros v2022_08_02
 http://abav.lugaralgum.com/lousa-magica
+
+Para executar é necessário:
+py5 (sketch_runner ou imported mode no Thonny IDE) e PyFirmata 
 """
 
 def setup():
