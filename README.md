@@ -12,8 +12,14 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 #### Breve histórico
 
 * A *Lousa mágica* foi apresentada inicialmente em conjunto com as atividades do [Estúdio Hacker](http://estudiohacker.io) na inauguração do Sesc 24 de Maio, em agosto de 2017 (vídeo acima). Usando 6 potenciômetros, permitia desenhar e o desenho podia ser apagado tombando a caixa de controle. Também era possível (por conta de uma biblioteca) postar *tweets* com o desenho.
+
+![tweet da inauguração do Sesc 24 de maio](https://user-images.githubusercontent.com/3694604/182716588-bd2c7421-f3fa-45b2-b355-ad4d7b6ee68f.png)
+
 * No Estúdio Hacker Day em 7 de setembro de 2017, também no Sesc 24 de maio, foi realizada atividade em que os participantes montavam uma versão da *Lousa mágica* com 4 potenciômetros em uma protoboard.
 * Para o Circuito Sesc de Artes 2018 foram feitas montagens com 4 potenciômetros com uma variante do software da *Lousa mágica* e uma versão nova chamada *Lousa paramétrica* com um desenho paramétrico recursivo de uma árvore.
+
+![Amostra de imagens produzidas](https://user-images.githubusercontent.com/3694604/182716439-e7de967b-ac41-45a5-b437-0427757c7be2.png)
+
 * Diversos desenhos do projeto [*sketch-a-day*](https://villares.github.com/sketch-a-day) podem ser usados com a mesma montagem.
 * A partir de 2020 o Processing modo Python passou a ter problemas em carregar a biblioteca *Serial* que é necessária para a comunicação com *Firmata* tornando difícil a utilização deste projeto.
 * Em 2022 acrescentada uma versão para uso com Thonny IDE e a biblioteca py5
