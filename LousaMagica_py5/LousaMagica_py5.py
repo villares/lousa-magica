@@ -1,10 +1,11 @@
 """
 Alexandre B A Villares
-Lousa-mágica - desenho com potenciômetros v2022_08_02
+Lousa-mágica - desenho com potenciômetros v2022_08_04
 http://abav.lugaralgum.com/lousa-magica
 
 Para executar é necessário:
-py5 (sketch_runner ou imported mode no Thonny IDE) e PyFirmata 
+py5 (Usando Thonny IDE com o thonny-py5mode ative o *imported mode*)
+PyFirmata 
 """
 
 def setup():
@@ -14,7 +15,8 @@ def setup():
     frame_rate(30)
     no_stroke()
     background(0)
-    arduino = get_arduino(0)  # Mude a porta aqui se necessário!   
+    # Mude a porta aqui se necessário!
+    arduino = get_arduino()  # get_arduino(2) ou get_arduino('COM3')
 
 def draw():
     pot_1 = arduino.analog_read(1)  # pino A1 (Analógico 1)
@@ -54,29 +56,36 @@ def get_arduino(port=None):
     
     from pyfirmata import Arduino, util
     from serial.tools import list_ports
-    ports = [comport.device for comport in list_ports.comports()]
-    if not ports:
+    
+    comports = [comport.device for comport in list_ports.comports()]
+    print('\n'.join(f'{i}: {p}' for i, p in enumerate(comports)))
+    
+    if port is None:
+        port = len(comports) - 1
+    
+    if isinstance(port, int) and 0 <= port < len(comports):
+        port_name = comports[port]
+    elif isinstance(port, str) and port in comports:
+        port_name = port
+    else:  # port int out of range or str not in comports
         raise Exception('No board/Arduino port found')
-    elif port is None:
-        print('\n'.join(f'{i}: {p}' for i, p in enumerate(ports)))
-        port = len(ports) - 1
-    if isinstance(port, str):
-        print(f'Trying to connect to port: {port}')
-        arduino = Arduino(port)
-    else:
-        print(f'Trying to connect to port {port}: {ports[port]}')
-        arduino = Arduino(ports[port])
-    util.Iterator(arduino).start()
-    for a in range(6):  # A0 A1 A2 A3 A4 A5
-        arduino.analog[a].enable_reporting()
-    arduino.analog_read = (lambda a: round(arduino.analog[a].read() * 1023)
-                           if arduino.analog[a].read() is not None
+    
+    print(f'Trying to connect to: {port_name}...')
+    board = Arduino(port_name)
+    util.Iterator(board).start()
+    print(board)
+    # Prepare board.analog_read() for A0 A1 A2 A3 A4 A5
+    for a in range(6):  
+        board.analog[a].enable_reporting()
+    board.analog_read = (lambda a: round(board.analog[a].read() * 1023)
+                           if board.analog[a].read() is not None
                            else 0)
-    digital_pin_dict = {d: arduino.get_pin(f'd:{d}:i')
+    # Prepare board.digital_read() for D2 to D13
+    digital_pin_dict = {d: board.get_pin(f'd:{d}:i')
                         for d in range(2, 14)}
-    for d in digital_pin_dict.keys():
+    for d in digital_pin_dict.keys(): 
         digital_pin_dict[d].enable_reporting()
-    arduino.digital_read = (lambda d: digital_pin_dict[d].read()
+    board.digital_read = (lambda d: digital_pin_dict[d].read()
                             if digital_pin_dict[d].read() is not None
                             else False)
-    return arduino
+    return board
