@@ -1,7 +1,8 @@
+----
+
 # Versão inicial com Processing modo Python (não está funcionando)
 
-**Atenção:** As instruções a seguir são apenas para registro histórico. No momento há relatos de que no IDE Processig 3.5.4 a biblioteca Serial da qual depende a biblioteca Arduino/Firmata não está funcionando, e
-o modo Python também não está funcionando no IDE Processing 4.0. 
+**Atenção:** No momento há relatos de que no IDE Processig 3.5.4 a biblioteca Serial da qual depende a biblioteca Arduino/Firmata não está funcionando, e o modo Python também não está funcionando no IDE Processing 4.0. As instruções a seguir acabam permanecendo como registro histórico do projeto.
 
 ----
  
@@ -13,7 +14,7 @@ o modo Python também não está funcionando no IDE Processing 4.0.
 Procure testar usando os números das portas que aparecem no console do Processing, começando pela primeira da lista: `NUM_PORTA = 0`.;
 
     > Problemas conhecidos:
-    > - No Linux, confirme a permissão de acesso à porta USB/serial (mencionados no final do item 2).
+    > - No Linux, confirme a permissão de acesso à porta USB/serial (mencionados no final do item 2 das instruções de montagem).
     > - No Windows 64-bits o Processing modo Python pode tentar carregar a versão errada, de 32-bits, da biblioteca de comunicação serial. É possivel contornar o problema apagando ou renomeando o arquivo `C:\Program Files\processing-3.X.X\modes\java\libraries\serial\library\windows32\jSSC-2.8.dll` como documentado em [issue 227](https://github.com/jdf/Processing.py-Bugs/issues/227).
 
 #### Explore as outras versões no repositório  [`github.com/villares/lousa-magica`](https://github.com/villares/lousa-magica/):
