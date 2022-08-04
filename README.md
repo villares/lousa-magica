@@ -67,11 +67,11 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 
 5. Veja as instruções para alguma das variantes da parte do software que desenha na tela:
 
-    A. [Versão inicial com Processing modo Python](Processing-modo-Python.md) (não está funcionando atualmente)
-    
+    **A. [Versão com Thonny IDE, py5 e pyfirmata](Thonny-py5.md)**
+
     B. [Versão com Processing modo Java](Processing-modo-Java.md)
-    
-    C. [Versão com Thonny IDE, py5 e pyfirmata](Thonny-py5.md)
+
+    C. [Versão original com Processing modo Python](Processing-modo-Python.md) (não está funcionando atualmente)
     
 #### Exemplo de montagem com Arduino Nano
 
