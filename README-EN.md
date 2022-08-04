@@ -61,17 +61,18 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 
 5. Now the software part, for drawing in the screen:
 
-    5.A  To use in the Processing IDE:
-    - Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`; 
-    - Copy from [code for Processing Python Mode](Processing-modo-Python.md) (not working at this time due to Serial library issues) or;
-    - Copy from [code for Processing Java Mode](Processing-modo-Java.md). 
-            
-    5.B  To use with Thonny IDE, py5 and pyfirmata
+    **5.A  To use with Thonny IDE, py5 and pyfirmata**
     - [Install Thonny and the thonny-py5mode plug-in](https://abav.lugaralgum.com/como-instalar-py5/index-EN.html#how-to-install-py5);
     - Inside Thonny IDE, select `Tools > Manage Packages...` and install **pyFirmata**;
-    - Copy code from [LousaMagica_py5.py](LousaMagica_py5/LousaMagica_py5.py) or [lousa_parametrica_arvore_py5.py](lousa_parametrica_arvore_py5/lousa_parametrica_arvore_py5.py).
+    - Copy code from:
+        - [LousaMagica_py5.py](LousaMagica_py5/LousaMagica_py5.py) - Drawing with pots 
+        - [lousa_parametrica_arvore_py5.py](lousa_parametrica_arvore_py5/lousa_parametrica_arvore_py5.py) - Parametric recursive tree
 
-
+    5.A  To use in the Processing IDE:
+    - Open the Processing IDE and download the **Arduino (Firmata)** library in `Sketch > Import Library... > Add Library...`; 
+    - Copy code from [sketches made for Processing Java Mode](Processing-modo-Java.md); 
+    - [Sketches made for Processing Python Mode](Processing-modo-Python.md) (not currently working due to Python mode + Serial library issues).
+            
 #### Arduino Nano example
 
 ![setup](assets/montagem2.png)
