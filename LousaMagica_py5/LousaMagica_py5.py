@@ -1,6 +1,6 @@
 """
 Alexandre B A Villares
-Lousa-mágica - desenho com potenciômetros v2022_08_04
+Lousa mágica - desenho com potenciômetros v2022_08_04
 http://abav.lugaralgum.com/lousa-magica
 
 Para executar é necessário:
