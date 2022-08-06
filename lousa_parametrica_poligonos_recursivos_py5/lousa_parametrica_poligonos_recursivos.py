@@ -1,6 +1,7 @@
 """
-polígonos recursivos - alexandre B A villares - http://estudiohacker.io
-estudo para o circuito sesc 2018 (não apresentado)
+Polígonos recursivos - Alexandre B A Villares
+https://abav.lugaralgum.com/lousa-magica
+[Estudo não apresentado] Circuito Sesc de Artes 2018 
 
 tecle 'h' para ajuda...
 """
@@ -18,17 +19,16 @@ def setup():
 def draw():
     background(0)
 
-    ang = remap(input_interface.analog(1), 0, 1023, PI / 6, TWO_PI / 3)  # ângulo
+    ang = remap(input_interface.analog_read(1), 0, 1023, PI / 6, TWO_PI / 3)  # ângulo
     depth_upper_limit = 2 + ang * 1.5  # change J's upper limit...
-    dep = remap(input_interface.analog(2), 0, 1023, 1, depth_upper_limit)
+    dep = remap(input_interface.analog_read(2), 0, 1023, 1, depth_upper_limit)
                                        # 1 to 2 + ang * 1.5
-    sat = remap(input_interface.analog(3), 0, 1023, 0, 255)  # saturação
-    rot = remap(input_interface.analog(4), 0, 1023, 0, TWO_PI)  # 0 to TWO_PI # giro
+    sat = remap(input_interface.analog_read(3), 0, 1023, 0, 255)  # saturação
+    rot = remap(input_interface.analog_read(4), 0, 1023, 0, TWO_PI)  # 0 to TWO_PI # giro
 
     poly_shape(width / 2, height / 2, ang, dep, sat, rot)
-
     # Desenha e lê sliders se necessário
-    input_interface.update(is_mouse_pressed, mouse_x, mouse_y)
+    input_interface.update()
 
 
 def poly_shape(x, y, angle, depth, saturation_, rotation):
@@ -57,15 +57,13 @@ def poly_shape(x, y, angle, depth, saturation_, rotation):
                 # recusively call poly_shape with a smaller D
                 poly_shape(pv.x, pv.y, angle, depth - 1, saturation_, rotation)
 
-
 def key_pressed():
     if key == 'p':
         save_frame("lousa-03-####.png")
     if key == 'h':
         input_interface.help()
 
-    input_interface.key_pressed(key, key_code)
-
+    input_interface.key_pressed()
 
 def key_released():
-    input_interface.key_released(key, key_code)
+    input_interface.key_released()
