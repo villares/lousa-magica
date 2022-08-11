@@ -41,7 +41,8 @@ Ferramentas de desenhar com potenciômetros ([veja o repositório no GitHub!](ht
 * Computador com monitor (ou laptop) Linux, Mac ou Windows. Para impressionar as visitas use uma TV grande ou um projetor.
 * Opcional: Botão instantâneo ou interruptor de mercúrio (pode ser usado apenas o teclado do computador) e resistor 10kΩ (caso seja usado um botão/interruptor conectado a um pino diferente do `D13`);
 
-![montagem](assets/montagem-lousa-magica.png)
+> ![montagem](assets/montagem-lousa-magica.png)
+> Ilustração de montagem em um protoboard
 
 #### Passo a passo
 
