@@ -18,7 +18,7 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 > ![tweet from Sesc 24 de maio inauguration](https://user-images.githubusercontent.com/3694604/182716588-bd2c7421-f3fa-45b2-b355-ad4d7b6ee68f.png)
 > It was also possible to post *tweets* with the drawing content (using a Twitter API library).
 
-* On Estúdio Hacker Day  (September 7th, 2017), also at Sesc 24 de maio, a workshop was held where the participants set up a version of *Lousa mágica* with 4 potentiometers in a protoboard.
+* On Estúdio Hacker Day  (September 7th, 2017), also at Sesc 24 de maio, a workshop was held where the participants set up a version of *Lousa mágica* with 4 potentiometers in a breadboard.
 
 * Setups with 4 potentiometers using a variation of the *Lousa mágica* software and a new version called *Lousa paramétrica* with a recursive parametric drawing of a tree were displayed at the [Sesc Art Circuit 2018](https://circuito.sescsp.org.br/).
 
@@ -35,8 +35,8 @@ Tools for drawing with potentiometers ([take a look at the GitHub repo!](https:/
 * Arduino (or similar board) with at least 4 analog pins;
 * USB cable to link up the Arduino to the computer;
 * 4 to 6 linear  10kΩ potentiometers (type "B") (you can use 2 or 3 but it's not as cool);
-* Protoboard and jumpers;
-* Computer and monitor (or a laptop) running Linux, Mac or Windows. Use a big TV or a projector for bigger impact on guests!
+* A breadboard and some jumpers;
+* A computer with a display (or a laptop) running Linux, Mac or Windows. Use a big TV or a projector for bigger impact on guests!
 * Optional: button or mercury tilt switch (the computer keyboard may be used instead) and 10kΩ resistor  (if it's a button/switch connected to a pin other than `D13`);
 
 ![setup](assets/montagem-lousa-magica.png)
