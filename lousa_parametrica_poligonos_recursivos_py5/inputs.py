@@ -191,9 +191,23 @@ def get_arduino(port=None):
     Firmata library interface:
     Readings are never None, and analog pins return a value between 0 and 1023.
     """   
-    from pyfirmata import Arduino, util
+    from pyfirmata import Arduino, util, Board
     from serial.tools import list_ports
     
+    # Monkey patching pyfirmata's Board class - should work on Python >= 3.7
+    def add_cmd_handler(self, cmd, func):
+        """Adds a command handler for a command."""
+        len_args = len(inspect.getfullargspec(func)[0]) # was getargspec
+        def add_meta(f):
+            def decorator(*args, **kwargs):
+                f(*args, **kwargs)
+            decorator.bytes_needed = len_args - 1  # exclude self
+            decorator.__name__ = f.__name__
+            return decorator
+        func = add_meta(func)
+        self._command_handlers[cmd] = func
+    Board.add_cmd_handler = add_cmd_handler
+
     comports = [comport.device for comport in list_ports.comports()]
     if not comports:
         print('No ports found.')
